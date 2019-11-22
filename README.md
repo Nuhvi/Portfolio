@@ -1,97 +1,214 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's hello-world starter
-</h1>
+![](https://i.imgur.com/TlwEgUo.png)
 
-Kick off your project with this hello-world boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+# Gatsby Starter Portfolio: Jodie
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+A portfolio starter for [Gatsby](https://www.gatsbyjs.org/). The target audience are designers and photographers.
 
-## 🚀 Quick start
+[Demo Website](https://jodie.lekoarts.de)
 
-1.  **Create a Gatsby site.**
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/LeKoArts/gatsby-starter-portfolio-jodie) [![Edit gatsby-starter-portfolio-jodie](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/LeKoArts/gatsby-starter-portfolio-jodie/tree/master/)
 
-    Use the Gatsby CLI to create a new site, specifying the hello-world starter.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f51f5488-aa2d-4e42-baa7-4182d9e81c2e/deploy-status)](https://app.netlify.com/sites/portfolio-jodie/deploys) [![CircleCI](https://circleci.com/gh/LekoArts/gatsby-starter-portfolio-jodie.svg?style=svg)](https://circleci.com/gh/LekoArts/gatsby-starter-portfolio-jodie)
 
-    ```shell
-    # create a new Gatsby site using the hello-world starter
-    gatsby new my-hello-world-starter https://github.com/gatsbyjs/gatsby-starter-hello-world
-    ```
+- CSS-Grid powered layout with Sidebar
+- Large images & Instagram integration
+- Themeable pages & automatically adapting sidebar
 
-1.  **Start developing.**
+## Why?
 
-    Navigate into your new site’s directory and start it up.
+If you want to quickly bootstrap a design/photography portfolio or use it as a foundation for your personal site, the starters in _gatsby-starter-portfolio_ are a perfect fit for you! The project's goal is to offer minimalistic and fast websites.
 
-    ```shell
-    cd my-hello-world-starter/
-    gatsby develop
-    ```
+I hope you like my starters and create something awesome! To see some of my work, you can visit my [website](https://www.lekoarts.de) or support me on [Patreon](https://www.patreon.com/lekoarts) to get some neat rewards (4K images, project files, tutorial insights). Every pledge on Patreon helps me create more free starters!
 
-1.  **Open the source code and start editing!**
+Also, check out the other starters for _gatsby-starter-portfolio_:
 
-    Your site is now running at `http://localhost:8000`!
+- [gatsby-starter-portfolio-emma](https://github.com/LekoArts/gatsby-starter-portfolio-emma)
+- [gatsby-starter-portfolio-emilia](https://github.com/LekoArts/gatsby-starter-portfolio-emilia)
+- [gatsby-starter-portfolio-bella](https://github.com/LekoArts/gatsby-starter-portfolio-bella)
+- [gatsby-starter-portfolio-cara](https://github.com/LekoArts/gatsby-starter-portfolio-cara)
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+Check out the [Gatsby Starter Portfolio Overview](https://gatsby-starter-portfolio.netlify.com/)!
 
-    Open the `my-hello-world-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+## Features
 
-## 🧐 What's inside?
+- Configurable
+    - Use the config to easily change the most important information
+    - Change the theming for styled-components
+    - Navigation powered by a .yaml file
+    - Layout driven by CSS-Grid
+- Create your projects by creating a folder full of images and adding an entry to a .yaml file
+- Shows your Instagram posts
+- TypeScript
+- Cypress for End-to-End testing
+- react-spring animations
+- Uses styled-components + styled-system for styling
+- Google Analytics support
+- SEO
+    - Sitemap
+    - Schema.org JSONLD
+    - OpenGraph Tags
+    - Twitter Tags
+- Offline Support
+- WebApp Manifest Support
+- Responsive Images
+    - Right image sizes
+    - Blurred loading animation
+    - WebP support
+    
+## Getting Started
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+Check your development environment! You'll need [Node.js](https://nodejs.org/en/), the [Gatsby CLI](https://www.gatsbyjs.org/docs/) and [node-gyp](https://github.com/nodejs/node-gyp#installation) installed. The official Gatsby website also lists two articles regarding this topic:
+- [Gatsby on Windows](https://www.gatsbyjs.org/docs/gatsby-on-windows/)
+- [Check your development environment](https://www.gatsbyjs.org/tutorial/part-zero/)
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+To copy and install this starter run this command (with "project-name" being the name of your folder you wish to install it in):
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+```
+gatsby new project-name https://github.com/LekoArts/gatsby-starter-portfolio-jodie
+cd project-name
+npm run develop
+```
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+### Configuring the Instagram source plugin
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+1. You need to have a Facebook page (I know... :/)
+1. Go to your site settings -> Instagram -> Login into your Instagram account
+1. Create a [app](https://developers.facebook.com/apps/)
+1. Go to the [Graph API Explorer][gae]
+    1. Select your App from the top right dropdown menu
+    1. Select "Get User Access Token" from dropdown (right of access token field) and select needed permissions (manage_pages, pages_show_list, instagram_basic)
+    1. Copy user access token
+1. [Access Token Debugger][atd]:
+    1. Paste copied token and press "Debug"
+    1. Press "Extend Access Token" and copy the generated long-lived user access token
+1. [Graph API Explorer][gae]:
+    1. Paste copied token into the "Access Token" field
+    1. Make a GET request with "PAGE_ID?fields=access_token"
+    1. Find the permanent page access token in the response (node "access_token")
+1. [Access Token Debugger][atd]:
+    1. Paste the permanent token and press "Debug"
+    1. "Expires" should be "Never"
+    1. Copy the **access token**
+1. [Graph API Explorer][gae]:
+    1. Make a GET request with "PAGE_ID?fields=instagram_business_account" to get your **Business ID**
+    
+Now create a `.env` file at the root of the project with the following content:
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+```
+BUSINESS_ID=YOUR_ID
+ACCESS_TOKEN=YOUR_TOKEN
+```
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+You can paste your access token and Business ID there.
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
+### Adding a new project
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+1. Create a new folder in `content/projects` and place your images there
+1. Add your project to the `content/projects/projects.yaml` file
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+### Adding a new page
 
-9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
+Create a new `.tsx` file in the `src/pages` directory
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+### Adding new features/plugins
 
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+You can add other features by having a look at the official [plugins page](https://www.gatsbyjs.org/docs/plugins/)
 
-12. **`README.md`**: A text file containing useful reference information about your project.
+### Building your site
 
-## 🎓 Learning Gatsby
+```
+npm run build
+```
+Copy the content of the `public` folder to your webhost or use a website like Netlify which automates that for you.
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
+## Configuration
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+You can configure your setup in `config/index.js`:
 
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+```JS
+module.exports = {
+  pathPrefix: '/', // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "portfolio"
 
-## 💫 Deploy
+  siteTitle: 'Jodie', // Navigation and Site Title
+  siteTitleAlt: 'Jodie - Gatsby Starter Portfolio', // Alternative Site title for SEO
+  siteTitleShort: 'Jodie', // short_name for manifest
+  siteHeadline: 'Come & Enjoy our excellent photos', // Headline for schema.org JSONLD
+  siteUrl: 'https://jodie.lekoarts.de', // Domain of your site. No trailing slash!
+  siteLanguage: 'en', // Language Tag on <html> element
+  siteLogo: '/logos/logo.png', // Used for SEO and manifest
+  siteDescription: 'Image-heavy photography portfolio with colorful accents & great typography',
+  author: 'LekoArts', // Author for schema.org JSONLD
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-hello-world)
+  // siteFBAppID: '123456789', // Facebook App ID - Optional
+  userTwitter: '@jodie', // Twitter Username
+  ogSiteName: 'jodie', // Facebook Site Name
+  ogLanguage: 'en_US', // og:language
+  googleAnalyticsID: 'UA-XXXXXX-X',
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+  // Manifest and Progress color
+  themeColor: '#db7436',
+  backgroundColor: '#3b3c4f',
+}
+```
+
+You can also configure the styling of the site by editing the theme variables in `config/theme.ts`.
+
+```typescript
+interface ThemeShape {
+  breakpoints: string[]
+  fontSizes: string[]
+  colors: {
+    [key: string]: string
+  }
+  space: string[]
+  fontWeights: {
+    [key: string]: number
+  }
+  sidebarWidth: {
+    [key: string]: string
+  }
+}
+
+const theme: ThemeShape = {
+  breakpoints: ['480px', '650px', '1000px', '1200px', '1400px'],
+  fontSizes: ['1rem', '1.2rem', '1.44rem', '1.728rem', '2.074rem', '2.488rem'],
+  colors: {
+    primary: '#c66131',
+    secondary: '#494992',
+    grey: '#646066',
+    shade: '#f5f5f5',
+  },
+  space: [
+    '0',
+    '0.25rem',
+    '0.5rem',
+    '0.75rem',
+    '1rem',
+    '1.25rem',
+    '1.5rem',
+    '2rem',
+    '2.5rem',
+    '3rem',
+    '4rem',
+    '6rem',
+    '8rem',
+    '12rem',
+    '16rem',
+  ],
+  fontWeights: {
+    normal: 400,
+    bold: 700,
+  },
+  sidebarWidth: {
+    big: '375px',
+    normal: '320px',
+  },
+}
+
+export default theme
+```
+
+**Attention:** You also need to edit `static/robots.txt` to include your domain!
+
+[gae]: https://developers.facebook.com/tools/explorer/
+[atd]: https://developers.facebook.com/tools/debug/accesstoken/
