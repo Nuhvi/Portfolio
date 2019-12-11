@@ -1,76 +1,61 @@
 {
-  "name": "gatsby-london-after-midnight",
+  "name": "fidalgo-portfolio-gatsby",
   "private": true,
-  "description": "A custom, image-centric theme for Gatsby",
-  "version": "1.0.2",
-  "author": "Vaporwavy <i@ttv8.me> (https://vaporwavy.io)",
-  "bugs": {
-    "url": "https://github.com/vaporwavy/gatsby-london-after-midnight/issues"
-  },
+  "description": "Fidalgo Font-end developer portfolio",
+  "version": "1.0.0",
+  "author": "Fidalgo",
   "dependencies": {
-    "gatsby": "^2.4.2",
-    "gatsby-image": "^2.0.41",
-    "gatsby-plugin-feed": "^2.2.0",
-    "gatsby-plugin-google-analytics": "^2.0.19",
-    "gatsby-plugin-manifest": "^2.1.1",
-    "gatsby-plugin-netlify": "^2.0.17",
-    "gatsby-plugin-offline": "^2.1.0",
-    "gatsby-plugin-postcss": "^2.0.7",
-    "gatsby-plugin-purgecss": "^3.1.1",
-    "gatsby-plugin-react-helmet": "^3.0.12",
-    "gatsby-plugin-sharp": "^2.0.36",
-    "gatsby-remark-copy-linked-files": "^2.0.12",
-    "gatsby-remark-images": "^2.0.6",
-    "gatsby-remark-prismjs": "^3.3.20",
-    "gatsby-remark-responsive-iframe": "^2.1.1",
-    "gatsby-remark-smartypants": "^2.0.9",
-    "gatsby-source-filesystem": "^2.0.33",
-    "gatsby-transformer-remark": "^2.3.12",
-    "gatsby-transformer-sharp": "^2.1.19",
-    "prismjs": "^1.16.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "@fortawesome/fontawesome-svg-core": "^1.2.26",
+    "@fortawesome/free-brands-svg-icons": "^5.12.0",
+    "@fortawesome/free-solid-svg-icons": "^5.12.0",
+    "@fortawesome/react-fontawesome": "^0.1.8",
+    "add": "^2.0.6",
+    "babel-plugin-styled-components": "^1.10.6",
+    "gatsby": "^2.18.11",
+    "gatsby-cli": "^2.8.18",
+    "gatsby-image": "^2.2.36",
+    "gatsby-plugin-google-analytics": "^2.1.31",
+    "gatsby-plugin-manifest": "^2.2.33",
+    "gatsby-plugin-offline": "^3.0.29",
+    "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
+    "gatsby-plugin-react-helmet": "^3.1.18",
+    "gatsby-plugin-sharp": "^2.3.7",
+    "gatsby-plugin-styled-components": "^3.1.16",
+    "gatsby-plugin-use-dark-mode": "^1.1.2",
+    "gatsby-remark-external-links": "0.0.4",
+    "gatsby-source-filesystem": "^2.1.42",
+    "gatsby-transformer-remark": "^2.6.42",
+    "gatsby-transformer-sharp": "^2.3.9",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
-    "typeface-alegreya": "^0.0.69",
-    "typeface-merriweather": "0.0.72",
-    "typeface-montserrat": "0.0.54",
-    "typeface-nunito": "^0.0.72",
-    "url-join": "^4.0.0"
+    "react-scroll": "^1.7.14",
+    "react-spring": "^8.0.27",
+    "rehype-react": "^4.0.1",
+    "styled-components": "^4.4.1",
+    "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
-    "autoprefixer": "^9.5.1",
-    "husky": "^2.2.0",
-    "postcss-color-function": "^4.1.0",
-    "postcss-custom-properties": "^8.0.10",
-    "postcss-easy-import": "^3.0.0",
-    "prettier": "^1.17.0",
-    "pretty-quick": "^1.10.0"
+    "prettier": "^1.19.1"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
-    "gatsby",
-    "ghost",
-    "gallery",
-    "blog",
-    "starter"
+    "gatsby"
   ],
   "license": "MIT",
-  "main": "n/a",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vaporwavy/gatsby-london-after-midnight.git"
-  },
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "GATSBY_GRAPHQL_IDE=playground gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }

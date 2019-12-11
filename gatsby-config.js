@@ -1,102 +1,86 @@
-const urljoin = require("url-join")
-const siteConfig = require("./siteConfig")
-
 module.exports = {
   siteMetadata: {
-    title: siteConfig.name,
-    author: siteConfig.author,
-    description: siteConfig.description,
-    siteUrl: urljoin(siteConfig.url, siteConfig.prefix),
+    title: `Fidalgo | Front-end Developer`,
+    description: `I’m Fidalgo, a 23 years old self-taught Front-end developer, from Portugal.`,
+    author: `Fidalgo`,
+    siteUrl: 'https://fidalgodev.com',
     social: {
-      twitter: siteConfig.twitter,
+      twitter: 'fidalgodev',
+      instagram: 'fidalgodev',
+      linkedin: 'fidalgodev',
+      youtube: 'Fidalgodev',
+      facebook: 'fidalgodev',
+      github: 'fidalgodev',
+      email: 'hello@fidalgo.dev',
     },
+    // name of the image for social website share, should be in static folder
+    imageShare: `share.jpg`,
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-141189217-1D',
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: false,
+      },
+    },
+    `gatsby-plugin-use-dark-mode`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-styled-components`,
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
+        name: `images`,
+        path: `${__dirname}/src/images`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/assets`,
-        name: `assets`,
+        name: `content`,
+        path: `${__dirname}/src/content`,
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
-        plugins: [
+        fonts: [
           {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 1360,
-              withWebp: true,
-              showCaptions: true,
-              quality: 75,
-              wrapperStyle: `margin: 7vw 0;`,
-            },
+            family: `Montserrat`,
+            variants: [`200`, `400`, `400i`, `600`, `600i`, `700`],
           },
-          {
-            resolve: `gatsby-remark-responsive-iframe`,
-            options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
-          },
-          `gatsby-remark-prismjs`,
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
         ],
       },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-postcss`,
+      resolve: `gatsby-transformer-remark`,
       options: {
-        postCssPlugins: [
-          require("postcss-easy-import")(),
-          require("postcss-custom-properties")({ preserve: false }),
-          require("postcss-color-function")(),
-          require("autoprefixer")({ browsers: ["last 2 versions"] }),
+        plugins: [
+          {
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              target: '_blank',
+              rel: 'noreferrer',
+            },
+          },
         ],
       },
     },
     {
-      resolve: `gatsby-plugin-purgecss`,
-      options: {
-        printRejected: true, // Print removed selectors and processed file names
-        develop: true, // Enable while using `gatsby develop`
-        // tailwind: true, // Enable tailwindcss support
-        // whitelist: ['whitelist'], // Don't remove this selector
-        ignore: ['/ignored.css', 'prismjs/', '/prism.css', 'docsearch.js/'], // Ignore files/folders
-        purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: ``,
-      },
-    },
-    `gatsby-plugin-feed`,
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: siteConfig.name,
-        short_name: siteConfig.shortName,
-        start_url: siteConfig.prefix,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
+        name: `Fidalgo | Front-end Developer`,
+        short_name: `Fidalgo`,
+        icon: `src/images/icon.png`,
+        start_url: `/`,
+        background_color: `#212121`,
+        theme_color: `#127EB1`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
       },
     },
-    `gatsby-plugin-netlify`,
     `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
   ],
-}
+};
