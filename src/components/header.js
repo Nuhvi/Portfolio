@@ -2,13 +2,17 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import { css } from 'linaria';
+
+const classes = {
+  header: css`
+    background: 'rebeccapurple';
+    margin-bottom: '1.45rem';
+  `,
+};
+
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
+  <header className={classes.header}>
     <div
       style={{
         margin: '0 auto',
