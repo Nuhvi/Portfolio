@@ -1,4 +1,4 @@
   
 linters:
   eslint:
-    config: './.eslintrc.config'
+    config: './.eslintrc-stickler.json'
