@@ -24,7 +24,6 @@
   "rules": {
     "prettier/prettier": "error",
     "no-shadow": "off",
-    "arrow-parens": [2, "always"],
     "react/jsx-filename-extension": [
       1,
       {
