@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import { css } from 'linaria';
 import themes from './config/themes';
