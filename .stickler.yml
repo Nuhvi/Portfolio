@@ -1,7 +1,4 @@
   
 linters:
   eslint:
-    extends: './.eslintrc.json'
-    rules: {
-      import/no-unresolved: off
-    }
+    config: './.eslint.config'
