@@ -1,4 +1,7 @@
   
 linters:
   eslint:
-    config: './.eslintrc-stickler.json'
+    config: './.eslintrc.json'
+    rules: {
+      "import/no-unresolved": "off"
+    }
