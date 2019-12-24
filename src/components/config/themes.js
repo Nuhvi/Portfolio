@@ -1,15 +1,16 @@
 export default {
   dark: {
     palette: {
-      main: '#212121',
+      primary: '#212121',
     },
     fontColor: {
-      main: '#F0F0F0',
+      primary: '#f5f5f5',
+      secondary: '#f50000',
     },
   },
   light: {
     palette: {
-      main: '#f4f3f3',
+      primary: '#f5f5f5',
     },
   },
 };

@@ -6,33 +6,69 @@ const classes = {
   header: css`
     width: 40%;
     height: 100%;
-    padding: 55px;
-    color: ${themes.dark.fontColor.main};
+    color: ${themes.dark.fontColor.primary};
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 
-    @media (max-width: 992px) {
-      width: 100%;
-      height: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      font-weight: 300;
+      font-size: 2rem;
+
+      span {
+        display: block;
+        margin-bottom: 1.2rem;
+      }
+
+      .header__name {
+        position: relative;
+        font-size: 2em;
+        font-weight: bold;
+        text-transform: uppercase;
+        z-index: 1;
+
+        &::before {
+          content: '';
+          z-index: -1;
+          position: absolute;
+          left: -8%;
+          top: 1.5%;
+          height: 100%;
+          width: 116%;
+          background-color: #f50000;
+          border-radius: 2px;
+          transform: rotate(-2deg);
+        }
+      }
+    }
+
+    h2 {
+      font-weight: normal;
+      font-size: 18px;
+      margin-top: 1.2rem;
+
+      .header__h2--bolder {
+        font-weight: bold;
+      }
     }
   `,
 };
 
 const Header = () => (
-  <header className={classes.header}>
-    <h1>
-      <p>Hi,</p>
-      <p>
-        I&apos;m <span>Nazeh</span>
-      </p>
-      <p>web developer.</p>
-    </h1>
-    <p>Coming soon.</p>
-    <p>
-      Check out my <a href="https://github.com/nazeh">Github</a> page.
-    </p>
-    <p>
-      Contact me at: <a href="mailto:hello@nazeh.me">hello@nazeh.me</a>.
-    </p>
-  </header>
+  <>
+    <header className={classes.header}>
+      <h1>
+        <span>Hello, I&apos;m</span>
+        <span className="header__name">Nazeh</span>
+      </h1>
+      <h2>
+        A <span className="header__h2--bolder">self-taught</span> web developer
+      </h2>
+    </header>
+  </>
 );
 
 export default Header;

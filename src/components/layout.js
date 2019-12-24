@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
   const classes = {
     layout: css`
       height: 100%;
-      background-color: ${themes.dark.palette.main};
+      background-color: ${themes.dark.palette.primary};
     `,
   };
 
