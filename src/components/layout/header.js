@@ -5,6 +5,7 @@ import NLogoBG from '../../images/NLogoBG.svg';
 
 const classes = {
   header: css`
+    min-height: 100vh;
     position: relative;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
     display: flex;

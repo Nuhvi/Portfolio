@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { css } from 'linaria';
 import Header from './header';
 import Footer from './footer';
-import themes from '../config/themes';
+import theme from '../config/theme';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -20,11 +20,17 @@ const Layout = ({ children }) => {
   const classes = {
     layout: css`
       height: 100%;
-      display: grid;
-      grid-template-columns: 40% 60%;
+      background-color: ${theme.colors.primary};
+      color: ${theme.colors.secondary};
 
-      background-color: ${themes.dark.palette.primary};
-      color: ${themes.dark.palette.secondary};
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+
+      @media (max-width: ${theme.breakpoints.md}px) {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+      }
     `,
   };
 

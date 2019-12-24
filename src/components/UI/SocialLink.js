@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from 'linaria';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import themes from '../config/themes';
+import theme from '../config/theme';
 
 const SocialLink = ({ href, icon }) => {
   const classes = {
@@ -14,12 +14,12 @@ const SocialLink = ({ href, icon }) => {
       align-items: center;
 
       border-radius: 50%;
-      border: 2px solid ${themes.dark.palette.highlight};
+      border: 2px solid ${theme.colors.highlight};
       transition: background-color 0.15s ease-out 0s;
 
       &:hover {
-        background-color: ${themes.dark.palette.highlight};
-        color: ${themes.dark.palette.primary};
+        background-color: ${theme.colors.highlight};
+        color: ${theme.colors.primary};
       }
 
       svg {
