@@ -5,6 +5,10 @@
   "version": "0.1.0",
   "author": "Nazeh <ar.nazeh@gmail.com>",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.26",
+    "@fortawesome/free-brands-svg-icons": "^5.12.0",
+    "@fortawesome/free-solid-svg-icons": "^5.12.0",
+    "@fortawesome/react-fontawesome": "^0.1.8",
     "gatsby": "^2.18.11",
     "gatsby-image": "^2.2.36",
     "gatsby-plugin-linaria": "^2.0.0",
