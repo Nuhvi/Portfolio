@@ -1,18 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 import Div100vh from 'react-div-100vh';
-import styled from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 import Header from './header';
 import Footer from './footer';
-import theme from '../config/theme';
+import { darkTheme, lightTheme } from '../config/themes';
+import { storeDarkMode, isDarkMode } from '../utils/dark-mode-persist';
 
 const Wrapper = styled.div`
   position: relative;
-  background-color: ${theme.colors.primary};
-  color: ${theme.colors.secondary};
+  background-color: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.secondary};
 
-  @media (min-width: ${theme.breakpoints.md}px) {
+  @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
     display: flex;
 
     .header-container {
@@ -31,7 +32,7 @@ const LoadingScreen = styled.div`
   width: 100%;
   height: 100%;
   z-index: 999;
-  background: ${theme.colors.primary};
+  background: ${(props) => props.theme.colors.primary};
 
   @keyframes fade-out {
     0% {
@@ -57,17 +58,27 @@ const Layout = ({ children }) => {
     }
   `);
 
+  const [darkMode, setDarkMode] = useState(isDarkMode());
+
+  const switchMode = () => {
+    setDarkMode(!darkMode);
+    storeDarkMode(darkMode);
+  };
+
   return (
-    <Wrapper>
-      <LoadingScreen />
-      <Div100vh className="header-container">
-        <Header siteTitle={data.site.siteMetadata.title} />
-      </Div100vh>
-      <div className="main-footer-container">
-        <main>{children}</main>
-        <Footer />
-      </div>
-    </Wrapper>
+    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+      <Wrapper>
+        <LoadingScreen />
+        <Div100vh className="header-container">
+          <Header siteTitle={data.site.siteMetadata.title} />
+        </Div100vh>
+        <div className="main-footer-container">
+          <main>{children}</main>
+          <Footer />
+          <input type="button" onClick={switchMode} />
+        </div>
+      </Wrapper>
+    </ThemeProvider>
   );
 };
 

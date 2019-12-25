@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import theme from '../config/theme';
 
 const StyledSocialLink = styled.a`
   width: 2em;
@@ -12,12 +11,12 @@ const StyledSocialLink = styled.a`
   align-items: center;
 
   border-radius: 50%;
-  border: 2px solid ${theme.colors.highlight};
+  border: 2px solid ${(props) => props.theme.colors.highlight};
   transition: background-color 0.15s ease-out 0s;
 
   &:hover {
-    background-color: ${theme.colors.highlight};
-    color: ${theme.colors.primary};
+    background-color: ${(props) => props.theme.colors.highlight};
+    color: ${(props) => props.theme.colors.primary};
   }
 
   svg {
