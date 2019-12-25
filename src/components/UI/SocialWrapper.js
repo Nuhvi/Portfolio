@@ -5,18 +5,16 @@ import {
   faLinkedinIn,
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
-import { css } from 'linaria';
+import styled from 'styled-components';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import SocialLink from './SocialLink';
 
-const classes = {
-  socialWrapper: css`
-    display: flex;
-    justify-content: space-around;
-    font-size: 1.2rem;
-    z-index: 50;
-  `,
-};
+const StyledSocialWrapper = styled.div`
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.2rem;
+  z-index: 50;
+`;
 
 const SocialWrapper = () => {
   const { site } = useStaticQuery(graphql`
@@ -36,7 +34,7 @@ const SocialWrapper = () => {
 
   const socialLinks = site.siteMetadata.social;
   return (
-    <div className={classes.socialWrapper}>
+    <StyledSocialWrapper>
       <SocialLink href={`mailto:${socialLinks.email}`} icon={faEnvelope} />
       <SocialLink href={`//github.com/${socialLinks.github}`} icon={faGithub} />
       <SocialLink
@@ -47,7 +45,7 @@ const SocialWrapper = () => {
         href={`//twitter.com/${socialLinks.twitter}`}
         icon={faTwitter}
       />
-    </div>
+    </StyledSocialWrapper>
   );
 };
 
