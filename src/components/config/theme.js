@@ -11,4 +11,7 @@ export default {
     lg: 1280,
     xl: 1920,
   },
+  shadows: {
+    1: '0 0 5px rgba(0, 0, 0, 0.25)',
+  },
 };

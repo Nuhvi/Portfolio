@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 import { css } from 'linaria';
+import Div100vh from 'react-div-100vh';
 import Header from './header';
 import Footer from './footer';
 import theme from '../config/theme';
@@ -19,24 +20,29 @@ const Layout = ({ children }) => {
 
   const classes = {
     layout: css`
-      height: 100%;
       background-color: ${theme.colors.primary};
       color: ${theme.colors.secondary};
 
-      display: grid;
-      grid-template-columns: 2fr 3fr;
-
-      @media (max-width: ${theme.breakpoints.md}px) {
-        height: auto;
+      @media (min-width: ${theme.breakpoints.md}px) {
         display: flex;
-        flex-direction: column;
+
+        .header-container {
+          position: relative;
+          width: 40%;
+        }
+
+        .main-footer-container {
+          width: 60%;
+        }
       }
     `,
   };
 
   return (
     <div className={classes.layout}>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Div100vh className="header-container">
+        <Header siteTitle={data.site.siteMetadata.title} />
+      </Div100vh>
       <div className="main-footer-container">
         <main>{children}</main>
         <Footer />

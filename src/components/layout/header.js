@@ -2,21 +2,28 @@ import React from 'react';
 import { css } from 'linaria';
 import SocialWrapper from '../UI/SocialWrapper';
 import NLogoBG from '../../images/NLogoBG.svg';
+import theme from '../config/theme';
 
 const classes = {
   header: css`
-    min-height: 100vh;
+    height: 100%;
     position: relative;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    box-shadow: ${theme.shadows[1]};
+
     display: flex;
     flex-direction: column;
+
+    @media (min-width: ${theme.breakpoints.md}px) {
+      position: fixed;
+      width: inherit;
+    }
 
     &::before {
       position: absolute;
       content: '';
       height: 100%;
       width: 100%;
-      opacity: 0.05;
+      opacity: 0.1;
       background-image: url(${NLogoBG});
       background-position: center;
       background-size: 150vh;
@@ -74,21 +81,18 @@ const classes = {
 };
 
 const Header = () => (
-  <>
-    <header className={classes.header}>
-      <div className="header__container">
-        <span className="header__greeting">Hello, I&apos;m</span>
-        <h1>
-          <span className="header__name">Nazeh</span>
-        </h1>
-        <h2>
-          A <span className="header__h2--bolder">self-taught</span> web
-          developer
-        </h2>
-        <SocialWrapper />
-      </div>
-    </header>
-  </>
+  <header className={classes.header}>
+    <div className="header__container">
+      <span className="header__greeting">Hello, I&apos;m</span>
+      <h1>
+        <span className="header__name">Nazeh</span>
+      </h1>
+      <h2>
+        A <span className="header__h2--bolder">self-taught</span> web developer
+      </h2>
+      <SocialWrapper />
+    </div>
+  </header>
 );
 
 export default Header;

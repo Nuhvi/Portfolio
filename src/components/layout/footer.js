@@ -19,7 +19,7 @@ const Footer = () => {
       font-size: 0.9rem;
       opacity: 0.5;
       text-align: center;
-      margin-top: 1rem;
+      padding: 1rem 0;
     `,
   };
 
