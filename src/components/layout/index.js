@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 import Div100vh from 'react-div-100vh';
 import styled, { ThemeProvider } from 'styled-components';
+import useDarkMode from 'use-dark-mode';
 import Header from './header';
 import Footer from './footer';
 import { darkTheme, lightTheme } from '../config/themes';
-import { storeDarkMode, isDarkMode } from '../utils/dark-mode-persist';
 
 const Wrapper = styled.div`
   position: relative;
@@ -58,15 +58,10 @@ const Layout = ({ children }) => {
     }
   `);
 
-  const [darkMode, setDarkMode] = useState(isDarkMode());
-
-  const switchMode = () => {
-    setDarkMode(!darkMode);
-    storeDarkMode(darkMode);
-  };
+  const darkMode = useDarkMode();
 
   return (
-    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+    <ThemeProvider theme={darkMode.value ? darkTheme : lightTheme}>
       <Wrapper>
         <LoadingScreen />
         <Div100vh className="header-container">
@@ -75,7 +70,7 @@ const Layout = ({ children }) => {
         <div className="main-footer-container">
           <main>{children}</main>
           <Footer />
-          <input type="button" onClick={switchMode} />
+          <input type="button" onClick={darkMode.toggle} />
         </div>
       </Wrapper>
     </ThemeProvider>
