@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { useStaticQuery, graphql } from 'gatsby';
 import Div100vh from 'react-div-100vh';
 import styled, { ThemeProvider } from 'styled-components';
 import useDarkMode from 'use-dark-mode';
@@ -12,6 +11,8 @@ const Wrapper = styled.div`
   position: relative;
   background-color: ${(props) => props.theme.colors.primary};
   color: ${(props) => props.theme.colors.secondary};
+
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 
   @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
     display: flex;
@@ -48,16 +49,6 @@ const LoadingScreen = styled.div`
 `;
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
-
   const darkMode = useDarkMode();
 
   return (
@@ -65,7 +56,7 @@ const Layout = ({ children }) => {
       <Wrapper>
         <LoadingScreen />
         <Div100vh className="header-container">
-          <Header siteTitle={data.site.siteMetadata.title} />
+          <Header />
         </Div100vh>
         <div className="main-footer-container">
           <main>{children}</main>
