@@ -14,6 +14,11 @@ const Wrapper = styled.div`
 
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 
+  .main-footer-container {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 1rem;
+  }
+
   @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
     display: flex;
 
@@ -24,6 +29,7 @@ const Wrapper = styled.div`
 
     .main-footer-container {
       width: 60%;
+      padding: 1.7rem;
     }
   }
 `;

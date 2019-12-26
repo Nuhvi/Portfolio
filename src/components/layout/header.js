@@ -11,21 +11,21 @@ const Wrapper = styled.header`
   display: flex;
   flex-direction: column;
 
-  @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
-    position: fixed;
-    width: inherit;
-  }
-
   &::before {
     position: absolute;
     content: '';
     height: 100%;
     width: 100%;
-    opacity: 0.1;
+    opacity: 0.05;
     background-image: url(${NLogoBG});
     background-position: center;
     background-size: 150vh;
     background-repeat: no-repeat;
+  }
+
+  @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
+    position: fixed;
+    width: inherit;
   }
 `;
 
