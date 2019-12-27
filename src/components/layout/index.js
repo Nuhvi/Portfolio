@@ -15,7 +15,7 @@ const Wrapper = styled.div`
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 
   .main-footer-container {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: ${(props) => props.theme.colors.darker};
     padding: 1rem;
   }
 
@@ -29,7 +29,7 @@ const Wrapper = styled.div`
 
     .main-footer-container {
       width: 60%;
-      padding: 1.7rem;
+      padding: 1.5rem;
     }
   }
 `;

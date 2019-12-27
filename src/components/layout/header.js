@@ -47,7 +47,7 @@ const HeaderContainer = styled.div`
     text-align: center;
     text-transform: uppercase;
     z-index: 1;
-    color: ${(props) => props.theme.colors.white};
+    color: ${(props) => props.theme.colors.light};
 
     &::before {
       content: '';

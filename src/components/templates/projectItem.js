@@ -4,11 +4,17 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 
 const ProjectWrapper = styled.section`
-  background: ${(props) => props.theme.colors.primary};
+  background-color: ${(props) => props.theme.colors.primary};
   box-shadow: ${(props) => props.theme.shadows[1]};
   border-radius: 4px;
   margin-bottom: 3rem;
   padding: 2rem;
+  transition: 0.1s ease-in-out;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: ${(props) => props.theme.shadows[7]};
+  }
 `;
 
 const Image = styled(Img)`
