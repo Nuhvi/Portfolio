@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import ProjectItem from '../templates/projectItem';
-import SectionHeading from '../UI/SectionHeading';
+import Section from '../UI/Section';
 
 const Projects = () => {
   const { allFile: projects } = useStaticQuery(graphql`
@@ -25,8 +25,8 @@ const Projects = () => {
                 stack
                 image {
                   childImageSharp {
-                    fluid(maxWidth: 800, quality: 80) {
-                      ...GatsbyImageSharpFluid_tracedSVG
+                    fluid(quality: 80) {
+                      ...GatsbyImageSharpFluid_withWebp
                     }
                   }
                 }
@@ -39,9 +39,7 @@ const Projects = () => {
     }
   `);
   return (
-    <section>
-      <SectionHeading>Portfolio</SectionHeading>
-
+    <Section title="projects" subtitle="Check out my latest work">
       {projects.edges.map((item, index) => (
         <ProjectItem
           key={item.node.id}
@@ -49,7 +47,7 @@ const Projects = () => {
           project={item.node.childMarkdownRemark}
         />
       ))}
-    </section>
+    </Section>
   );
 };
 

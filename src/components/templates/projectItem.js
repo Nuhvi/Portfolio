@@ -12,6 +12,7 @@ const ProjectWrapper = styled.article`
   border-radius: 4px;
   margin-bottom: 3rem;
   padding: 1.5rem;
+
   transition: 0.1s ease-in-out;
 
   font-size: 1;
