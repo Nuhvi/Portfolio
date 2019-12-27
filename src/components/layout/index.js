@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Div100vh from 'react-div-100vh';
 import styled, { ThemeProvider } from 'styled-components';
-import useDarkMode from 'use-dark-mode';
+import useDarkMode from '../utils/use-dark-mode';
 import Header from './header';
 import Footer from './footer';
 import { darkTheme, lightTheme } from '../config/themes';
