@@ -3,7 +3,7 @@ const baseTheme = {
     red: '#f50000',
     light: '#fafafa',
     dark: '#212121',
-    darker: '#1f1f1f',
+    darker: '#1d1d1d',
   },
   breakpoints: {
     xs: 0,
@@ -11,6 +11,7 @@ const baseTheme = {
     md: 960,
     lg: 1280,
     xl: 1920,
+    xxl: 3000,
   },
   shadows: {
     1: '0px 1px 3px 0px rgba(0,0,0,0.12)',

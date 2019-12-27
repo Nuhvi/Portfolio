@@ -1,6 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import ProjectItem from '../templates/projectItem';
+import SectionHeading from '../UI/SectionHeading';
 
 const Projects = () => {
   const { allFile: projects } = useStaticQuery(graphql`
@@ -38,14 +39,17 @@ const Projects = () => {
     }
   `);
   return (
-    <>
-      {projects.edges.map((item) => (
+    <section>
+      <SectionHeading>Portfolio</SectionHeading>
+
+      {projects.edges.map((item, index) => (
         <ProjectItem
           key={item.node.id}
+          index={index}
           project={item.node.childMarkdownRemark}
         />
       ))}
-    </>
+    </section>
   );
 };
 

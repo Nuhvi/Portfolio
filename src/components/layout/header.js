@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import SocialWrapper from '../UI/SocialWrapper';
 import NLogoBG from '../../images/NLogoBG.svg';
+import Highlighted from '../UI/Highlighted';
 
 const Wrapper = styled.header`
   height: 100%;
@@ -30,45 +31,29 @@ const Wrapper = styled.header`
 `;
 
 const HeaderContainer = styled.div`
-  height: 240px;
+  height: 15em;
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-size: 1em;
+  font-weight: 200;
 
   > span {
-    font-size: 2rem;
+    font-size: 2em;
   }
 
   h1 {
-    position: relative;
-    font-weight: bold;
-    font-size: 4rem;
+    font-size: 4em;
     text-align: center;
-    text-transform: uppercase;
-    z-index: 1;
-    color: ${(props) => props.theme.colors.light};
-
-    &::before {
-      content: '';
-      z-index: -1;
-      position: absolute;
-      left: -8%;
-      top: 1.5%;
-      height: 100%;
-      width: 116%;
-      background-color: #f50000;
-      border-radius: 2px;
-      transform: rotate(-2deg);
-    }
   }
 
   h2 {
-    font-weight: normal;
-    font-size: 18px;
+    font-size: 1.2em;
+    line-height: 2em;
 
     .header__h2--bolder {
-      font-weight: bold;
+      font-weight: 500;
     }
   }
 `;
@@ -77,7 +62,9 @@ const Header = () => (
   <Wrapper>
     <HeaderContainer>
       <span>Hello, I&apos;m</span>
-      <h1>Nazeh</h1>
+      <h1>
+        <Highlighted>Nazeh</Highlighted>
+      </h1>
       <h2>
         A <span className="header__h2--bolder">self-taught</span> web developer
       </h2>

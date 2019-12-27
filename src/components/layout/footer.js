@@ -8,6 +8,8 @@ const StyledFooter = styled.footer`
   opacity: 0.5;
   text-align: center;
   padding: 1rem 0;
+
+  text-transform: uppercase;
 `;
 
 const Footer = () => {
@@ -23,10 +25,7 @@ const Footer = () => {
 
   return (
     <StyledFooter>
-      <span>
-        © {new Date().getFullYear()} {data.site.siteMetadata.author}. Made with{' '}
-      </span>
-      <a href="https://github.com/Nazeh/Portfolio">Gatsby</a>
+      copyright © {new Date().getFullYear()} {data.site.siteMetadata.author}.
     </StyledFooter>
   );
 };
