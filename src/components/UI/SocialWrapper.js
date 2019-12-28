@@ -12,7 +12,7 @@ import SocialLink from './SocialLink';
 const StyledSocialWrapper = styled.div`
   display: flex;
   justify-content: space-around;
-  font-size: 1.2rem;
+  font-size: 1.2em;
   z-index: 50;
 `;
 

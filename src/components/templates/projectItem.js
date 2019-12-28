@@ -10,10 +10,10 @@ const ProjectWrapper = styled.article`
   background-color: ${(props) => props.theme.colors.primary};
   box-shadow: ${(props) => props.theme.shadows[1]};
   border-radius: 4px;
-  margin-bottom: 3rem;
-  padding: 1.5rem;
+  margin-bottom: 2em;
+  padding: 1em;
 
-  transition: 0.1s ease-in-out;
+  transition: transform 0.1s ease-in-out;
 
   font-size: 1;
 
@@ -23,14 +23,27 @@ const ProjectWrapper = styled.article`
   }
 `;
 
+const Details = styled.div`
+  display: flex;
+  justify-content: space-between;
+  height: 3em;
+  margin-top: 1em;
+
+  span {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+`;
+
 const Title = styled.h3`
   font-size: 1.4em;
-  margin: 0.5em 0;
   text-transform: capitalize;
 `;
 
 const Stack = styled.h4`
   font-size: 0.7em;
+  opacity: 0.8;
 `;
 
 const Image = styled(Img)`
@@ -41,13 +54,8 @@ const Description = styled.div`
   display: none;
 `;
 
-const Row = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-`;
-
 const Link = styled.a`
+  display: block;
   font-weight: normal;
 
   &:hover {
@@ -55,17 +63,11 @@ const Link = styled.a`
   }
 `;
 
-const ProjectItem = ({ project, index }) => {
+const ProjectItem = ({ project }) => {
   const { title, stack, source, live, image } = project.frontmatter;
   const description = project.html;
   return (
     <ProjectWrapper>
-      <Row>
-        <span>{`.0${index + 1}`}</span>
-        <Link href={source} target="_blank">
-          <FontAwesomeIcon icon={faGithubAlt} /> Source
-        </Link>
-      </Row>
       <Image
         fluid={image.childImageSharp.fluid}
         alt={`${title} project screenshot`}
@@ -73,22 +75,26 @@ const ProjectItem = ({ project, index }) => {
           objectFit: 'contain',
         }}
       />
-      <Row>
+      <Details>
         <span>
           <Title>{title}</Title>
           <Stack>{stack}</Stack>
         </span>
-        <Link href={live} target="_blank">
-          <FontAwesomeIcon icon={faLink} /> Demo
-        </Link>
-      </Row>
+        <span>
+          <Link href={source} target="_blank">
+            <FontAwesomeIcon icon={faGithubAlt} /> Source
+          </Link>
+          <Link href={live} target="_blank">
+            <FontAwesomeIcon icon={faLink} /> Demo
+          </Link>
+        </span>
+      </Details>
       <Description dangerouslySetInnerHTML={{ __html: description }} />
     </ProjectWrapper>
   );
 };
 
 ProjectItem.propTypes = {
-  index: PropTypes.number.isRequired,
   project: PropTypes.shape({
     frontmatter: PropTypes.shape({
       title: PropTypes.string.isRequired,

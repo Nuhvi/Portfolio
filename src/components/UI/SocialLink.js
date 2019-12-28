@@ -12,7 +12,7 @@ const StyledSocialLink = styled.a`
 
   border-radius: 50%;
   border: 2px solid ${(props) => props.theme.colors.highlight};
-  transition: background-color 0.15s ease-out 0s;
+  transition: background-color 0.2s ease-out 0s;
 
   &:hover {
     background-color: ${(props) => props.theme.colors.highlight};

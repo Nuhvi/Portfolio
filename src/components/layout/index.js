@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   background-color: ${(props) => props.theme.colors.primary};
   color: ${(props) => props.theme.colors.secondary};
 
-  transition: 0.1s ease-in-out;
+  transition: 0.2s ease-in-out;
 
   .main-footer-container {
     background-color: ${(props) => props.theme.colors.darker};
@@ -34,7 +34,6 @@ const Wrapper = styled.div`
 
     .main-footer-container {
       width: 65%;
-      padding: 0 1.5em;
     }
   }
 

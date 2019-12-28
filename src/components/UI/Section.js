@@ -10,8 +10,9 @@ const Title = styled.h2`
 `;
 
 const Subtitle = styled.p`
-  padding: 1em;
+  margin-top: 1em;
   font-size: 0.7em;
+  opacity: 0.7;
 `;
 
 const Section = ({ children, title, subtitle }) => {

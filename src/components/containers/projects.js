@@ -40,10 +40,9 @@ const Projects = () => {
   `);
   return (
     <Section title="projects" subtitle="Check out my latest work">
-      {projects.edges.map((item, index) => (
+      {projects.edges.map((item) => (
         <ProjectItem
           key={item.node.id}
-          index={index}
           project={item.node.childMarkdownRemark}
         />
       ))}
