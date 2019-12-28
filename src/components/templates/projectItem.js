@@ -15,7 +15,7 @@ const ProjectWrapper = styled.article`
 
   transition: transform 0.1s ease-in-out;
 
-  font-size: 1;
+  font-size: 1em;
 
   &:hover {
     transform: scale(1.02);

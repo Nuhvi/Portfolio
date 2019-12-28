@@ -17,7 +17,7 @@ const Subtitle = styled.p`
 
 const Section = ({ children, title, subtitle }) => {
   return (
-    <section id={`#${title}`}>
+    <section id={title}>
       <Title>
         <Highlighted>{title}</Highlighted>
         <Subtitle>{subtitle}</Subtitle>
