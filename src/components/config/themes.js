@@ -10,8 +10,7 @@ const baseTheme = {
     sm: 600,
     md: 960,
     lg: 1280,
-    xl: 1920,
-    xxl: 3000,
+    xl: 2000,
   },
   shadows: {
     1: '0px 1px 3px 0px rgba(0,0,0,0.12)',

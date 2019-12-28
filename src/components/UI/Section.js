@@ -5,13 +5,13 @@ import Highlighted from './Highlighted';
 
 const Title = styled.h2`
   text-align: center;
-  padding: 2rem;
-  font-size: 1.5rem;
+  padding: 2em;
+  font-size: 1.5em;
 `;
 
 const Subtitle = styled.p`
-  padding: 1rem;
-  font-size: 1rem;
+  padding: 1em;
+  font-size: 0.7em;
 `;
 
 const Section = ({ children, title, subtitle }) => {

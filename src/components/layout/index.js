@@ -16,11 +16,12 @@ const Wrapper = styled.div`
 
   .main-footer-container {
     background-color: ${(props) => props.theme.colors.darker};
-    padding: 0 1rem;
+    padding: 0 1em;
+    font-size: 1em;
   }
 
   @media (max-width: ${(props) => props.theme.breakpoints.sm}px) {
-    font-size: 0.85em;
+    font-size: 0.85rem;
   }
 
   @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
@@ -33,12 +34,12 @@ const Wrapper = styled.div`
 
     .main-footer-container {
       width: 65%;
-      padding: 0 1.5rem;
+      padding: 0 1.5em;
     }
   }
 
-  @media (min-width: ${(props) => props.theme.breakpoints.xxl}px) {
-    font-size: 1.5em;
+  @media (min-width: ${(props) => props.theme.breakpoints.xl}px) {
+    font-size: 1.5rem;
   }
 `;
 
