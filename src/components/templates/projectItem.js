@@ -24,7 +24,7 @@ const ProjectWrapper = styled.article`
 `;
 
 const Title = styled.h3`
-  font-weight: 500;
+  font-size: 1.4em;
   margin: 0.5em 0;
   text-transform: capitalize;
 `;

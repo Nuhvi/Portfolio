@@ -4,7 +4,7 @@ import useOriginalDarkMode from 'use-dark-mode';
 const useDarkMode = () => {
   const darkMode = useOriginalDarkMode();
 
-  if (!localStorage.darkModeToggled) {
+  if (!storage.darkModeToggled) {
     const isDay = new Date().getHours() < 18;
     if (isDay && darkMode.value) darkMode.toggle();
   }
