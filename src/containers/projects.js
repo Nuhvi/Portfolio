@@ -7,7 +7,7 @@ const Projects = () => {
   const { allFile: projects } = useStaticQuery(graphql`
     query SiteProjectsQuery {
       allFile(
-        sort: { fields: [dir], order: DESC }
+        sort: { fields: [dir] }
         filter: {
           extension: { eq: "md" }
           sourceInstanceName: {}
