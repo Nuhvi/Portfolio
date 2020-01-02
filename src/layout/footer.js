@@ -8,6 +8,7 @@ const StyledFooter = styled.footer`
   opacity: 0.5;
   text-align: center;
   padding: 1em 0;
+  margin-top: 4rem;
 
   text-transform: uppercase;
 `;
