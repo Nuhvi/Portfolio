@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import SocialWrapper from '../UI/SocialWrapper';
-import NLogoBG from '../../images/NLogoBG.svg';
-import Highlighted from '../UI/Highlighted';
+import SocialWrapper from '../components/SocialWrapper';
+import NLogoBG from '../images/NLogoBG.svg';
+import Highlighted from '../components/Highlighted';
 
 const Wrapper = styled.header`
   height: 100%;
