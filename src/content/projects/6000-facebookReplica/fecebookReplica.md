@@ -6,4 +6,7 @@ stack: 'Rails - Ruby - Bootstrap - Rspec'
 image: 'facebookReplica.png'
 ---
 
-Test test test
+Social networking RESTful web app with full CRUD functionality.
+Developed models, views and controllers for users, posts, comment likes,
+and symmetrical friendships, using Rails. Implemented unit and
+integration tests with RSpec

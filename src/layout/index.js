@@ -22,6 +22,9 @@ const Wrapper = styled.div`
 
   @media (max-width: ${(props) => props.theme.breakpoints.sm}px) {
     font-size: 0.85rem;
+    .main-footer-container {
+      padding: 0 0.5em;
+    }
   }
 
   @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
@@ -33,6 +36,7 @@ const Wrapper = styled.div`
     }
 
     .main-footer-container {
+      padding: 0 2em;
       width: 65%;
     }
   }
@@ -75,7 +79,6 @@ const Layout = ({ children }) => {
         <div className="main-footer-container">
           <main>{children}</main>
           <Footer />
-          <input type="button" onClick={darkMode.toggle} />
         </div>
       </Wrapper>
     </ThemeProvider>

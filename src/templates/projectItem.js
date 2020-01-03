@@ -52,13 +52,13 @@ const ImgSummaryContainer = styled.div`
   position: relative;
 
   &:hover {
-    div {
+    .summary {
       display: flex;
     }
 
     .img {
-      filter: blur(5px);
       opacity: 0.2;
+      filter: blur(5px);
     }
   }
 `;
@@ -68,15 +68,21 @@ const Image = styled(Img)`
 `;
 
 const Summary = styled.div`
-  display: none;
   position: absolute;
-  top: 0;
-  left: 0;
+  display: none;
+  bottom: 0;
+
   height: 100%;
   width: 100%;
 
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+
+  padding: 2em;
+  line-height: 1.5em;
+  font-size: 1.1em;
 `;
 
 const Link = styled.a`
@@ -102,7 +108,10 @@ const ProjectItem = ({ project }) => {
           }}
           className="img"
         />
-        <Summary dangerouslySetInnerHTML={{ __html: summary }} />
+        <Summary
+          dangerouslySetInnerHTML={{ __html: summary }}
+          className="summary"
+        />
       </ImgSummaryContainer>
       <Details>
         <span>

@@ -6,4 +6,4 @@ stack: 'HTML5 - CSS3'
 image: 'youtupeClone.png'
 ---
 
-Test test test
+Fully responsive pixel perfect clone of Youtube video-player page, using HTML5, and CSS3.

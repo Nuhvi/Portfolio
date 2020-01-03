@@ -6,4 +6,4 @@ stack: 'Vanilla Javascript - SASS - HTML5'
 image: 'tictactoeApp.png'
 ---
 
-Test test test
+Elegant minimalistic design, with bold colors and playful animation and sound effects for a plain JS tic-tac-toe game. Added a Bot functionality using the Min-Max algorithm to power a single-player mode with different difficulty levels.
