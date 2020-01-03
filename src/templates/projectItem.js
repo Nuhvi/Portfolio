@@ -7,6 +7,8 @@ import { faGithubAlt } from '@fortawesome/free-brands-svg-icons';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 
 const ProjectWrapper = styled.article`
+  position: relative;
+
   background-color: ${(props) => props.theme.colors.primary};
   box-shadow: ${(props) => props.theme.shadows[1]};
   border-radius: 4px;
@@ -46,12 +48,35 @@ const Stack = styled.h4`
   opacity: 0.8;
 `;
 
+const ImgSummaryContainer = styled.div`
+  position: relative;
+
+  &:hover {
+    div {
+      display: flex;
+    }
+
+    .img {
+      filter: blur(5px);
+      opacity: 0.2;
+    }
+  }
+`;
+
 const Image = styled(Img)`
   width: 100%;
 `;
 
-const Description = styled.div`
+const Summary = styled.div`
   display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  justify-content: center;
+  align-items: center;
 `;
 
 const Link = styled.a`
@@ -65,16 +90,20 @@ const Link = styled.a`
 
 const ProjectItem = ({ project }) => {
   const { title, stack, source, live, image } = project.frontmatter;
-  const description = project.html;
+  const summary = project.html;
   return (
     <ProjectWrapper>
-      <Image
-        fluid={image.childImageSharp.fluid}
-        alt={`${title} project screenshot`}
-        imgStyle={{
-          objectFit: 'contain',
-        }}
-      />
+      <ImgSummaryContainer>
+        <Image
+          fluid={image.childImageSharp.fluid}
+          alt={`${title} project screenshot`}
+          imgStyle={{
+            objectFit: 'contain',
+          }}
+          className="img"
+        />
+        <Summary dangerouslySetInnerHTML={{ __html: summary }} />
+      </ImgSummaryContainer>
       <Details>
         <span>
           <Title>{title}</Title>
@@ -89,7 +118,6 @@ const ProjectItem = ({ project }) => {
           </Link>
         </span>
       </Details>
-      <Description dangerouslySetInnerHTML={{ __html: description }} />
     </ProjectWrapper>
   );
 };
