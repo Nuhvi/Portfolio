@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import SocialWrapper from '../components/SocialWrapper';
 import NLogoBG from '../images/NLogoBG.svg';
 import Highlighted from '../components/Highlighted';
+import NavBar from '../components/Navbar';
 
 const Wrapper = styled.header`
   height: 100%;
@@ -70,6 +71,7 @@ const Header = () => (
       </h2>
       <SocialWrapper />
     </HeaderContainer>
+    <NavBar />
   </Wrapper>
 );
 
