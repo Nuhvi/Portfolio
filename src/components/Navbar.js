@@ -14,6 +14,8 @@ import NavBtn from './NavBtn';
 const Nav = styled.nav`
   position: fixed;
   z-index: 9999;
+  right: 0;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,11 +23,8 @@ const Nav = styled.nav`
   height: 100%;
   width: 3em;
 
-  @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
-    position: absolute;
-    right: 0;
-    transform: translateX(50%);
-  }
+  position: absolute;
+  transform: translateX(52%);
 `;
 
 const Wrapper = styled.div`
@@ -39,7 +38,7 @@ const Wrapper = styled.div`
   align-items: center;
 `;
 
-const NavBackground = styled.div`
+const NavRedLine = styled.div`
   position: absolute;
   z-index: -1;
   height: 100%;
@@ -75,7 +74,7 @@ const Navbar = ({ theme }) => {
   }));
 
   return (
-    <Nav>
+    <Nav id="desktop-navbar">
       <Wrapper
         onMouseEnter={() => {
           set({
@@ -89,7 +88,7 @@ const Navbar = ({ theme }) => {
           set(defaultStyle);
         }}
       >
-        <NavBackground />
+        <NavRedLine />
         {trail.map((style, index) => (
           <NavBtnWrapper style={{ margin: style.margin }} key={links[index]}>
             <NavBtn
