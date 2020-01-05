@@ -55,13 +55,13 @@ const NavBtnWrapper = styled(animated.div)`
 `;
 
 const Navbar = ({ theme }) => {
-  const links = ['projects', 'about', 'contact', 'darkMode'];
+  const links = ['projects', 'about me', 'contact', 'darkMode'];
   const icons = [faEye, faUser, faEnvelope, faAdjust];
 
   const defaultStyle = {
     margin: '1em',
-    width: '0em',
-    height: '0em',
+    width: '16.1px',
+    height: '16.1px',
     border: `8px solid ${theme.colors.red}`,
   };
 
@@ -76,10 +76,11 @@ const Navbar = ({ theme }) => {
   return (
     <Nav id="desktop-navbar">
       <Wrapper
-        onMouseEnter={() => {
+        onMouseEnter={(e) => {
+          if (e.target.tagName === 'path') return;
           set({
-            width: '2.5em',
-            height: '2.5em',
+            width: '40px',
+            height: '40px',
             margin: '0.25em',
             border: `2px solid ${theme.colors.red}`,
           });
