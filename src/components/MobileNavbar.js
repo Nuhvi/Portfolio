@@ -104,7 +104,7 @@ const MobileNavbar = ({ theme }) => {
   });
 
   return (
-    <Nav id="mobile-navbar">
+    <Nav id="mobile-navbar" onMouseLeave={() => setToggle(false)}>
       <MobileNavToggle
         type="button"
         onClick={() => setToggle(!toggle)}
@@ -117,7 +117,6 @@ const MobileNavbar = ({ theme }) => {
           <NavBtnWrapper
             style={{ margin: style.margin, opacity: style.opacity }}
             key={links[index]}
-            onClick={() => setToggle(!toggle)}
           >
             <NavBtn
               style={{
