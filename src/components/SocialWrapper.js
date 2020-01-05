@@ -14,6 +14,9 @@ const StyledSocialWrapper = styled.div`
   justify-content: space-around;
   font-size: 1.2em;
   z-index: 50;
+
+  width: 270px;
+  margin: 0 auto;
 `;
 
 const SocialWrapper = () => {
