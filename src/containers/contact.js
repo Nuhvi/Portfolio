@@ -6,7 +6,6 @@ import SocialWrapper from '../components/SocialWrapper';
 
 const Wrapper = styled.div`
   margin: auto;
-  max-width: ${(props) => props.theme.breakpoints.sm}px;
   padding-bottom: 3em;
 `;
 

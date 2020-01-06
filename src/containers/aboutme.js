@@ -6,7 +6,6 @@ import Section from '../components/Section';
 const Wrapper = styled.div`
   margin: auto;
   padding-bottom: 3em;
-  max-width: ${(props) => props.theme.breakpoints.md}px;
 
   text-align: center;
   line-height: 1.5em;
