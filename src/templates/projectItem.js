@@ -88,6 +88,7 @@ const Summary = styled.div`
 const Link = styled.a`
   display: block;
   font-weight: normal;
+  min-width: 80px;
 
   &:hover {
     font-weight: 500;

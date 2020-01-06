@@ -1,5 +1,5 @@
 ---
-title: "Youtube video-player clone"
+title: "Youtube clone"
 live: 'https://nazeh.github.io/youtube_video_player_page/'
 source: 'https://github.com/Nazeh/youtube_video_player_page'
 stack: 'HTML5 - CSS3'
