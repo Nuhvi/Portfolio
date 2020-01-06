@@ -48,7 +48,7 @@ const NavBtn = ({ name, icon, style }) => {
           <FontAwesomeIcon icon={icon} style={{ width: '80%' }} />
         </button>
       ) : (
-        <a href={`#${name}`} title={name}>
+        <a href={`/#${name.replace(/\s/g, '')}`} title={name}>
           <FontAwesomeIcon icon={icon} style={{ width: '80%' }} />
         </a>
       )}

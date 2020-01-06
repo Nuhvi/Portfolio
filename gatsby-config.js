@@ -1,5 +1,6 @@
 module.exports = {
   siteMetadata: {
+    siteUrl: 'nazeh.me',
     title: 'Nazeh | Web Developer Portfolio',
     description: 'Self Taught Full Stack Developer.',
     author: 'Nazeh',

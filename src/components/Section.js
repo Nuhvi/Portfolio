@@ -19,7 +19,7 @@ const Subtitle = styled.p`
 
 const Section = ({ children, title, subtitle }) => {
   return (
-    <section id={title}>
+    <section id={title.replace(/\s/g, '')}>
       <Title>
         <Highlighted>{title}</Highlighted>
         <Subtitle>{subtitle}</Subtitle>
