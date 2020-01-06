@@ -7,6 +7,7 @@ import SocialWrapper from '../components/SocialWrapper';
 const Wrapper = styled.div`
   margin: auto;
   padding-bottom: 3em;
+  max-width: 600px;
 `;
 
 const Form = styled.form`
