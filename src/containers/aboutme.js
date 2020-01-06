@@ -54,7 +54,7 @@ const Projects = () => {
   const { skills, technologies } = frontmatter;
 
   return (
-    <Section title="about me" subtitle="Get to know me..">
+    <Section title="about me" subtitle="Get to know me.">
       <Wrapper>
         <About dangerouslySetInnerHTML={{ __html: html }} />
         <Skills>
