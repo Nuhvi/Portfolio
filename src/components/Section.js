@@ -10,9 +10,12 @@ const Title = styled.h2`
 `;
 
 const Subtitle = styled.p`
+  margin: auto;
   margin-top: 1em;
   font-size: 0.7em;
+  line-height: 1.2em;
   opacity: 0.7;
+  width: 60%;
 `;
 
 const Section = ({ children, title, subtitle }) => {

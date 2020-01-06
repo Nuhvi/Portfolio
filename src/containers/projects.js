@@ -1,13 +1,13 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import Section from '../components/Section';
 import ProjectItem from '../templates/projectItem';
-import Section from '../UI/Section';
 
 const Projects = () => {
   const { allFile: projects } = useStaticQuery(graphql`
     query SiteProjectsQuery {
       allFile(
-        sort: { fields: [dir], order: DESC }
+        sort: { fields: [dir] }
         filter: {
           extension: { eq: "md" }
           sourceInstanceName: {}

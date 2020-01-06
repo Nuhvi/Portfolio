@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Div100vh from 'react-div-100vh';
 import styled, { ThemeProvider } from 'styled-components';
@@ -22,6 +22,9 @@ const Wrapper = styled.div`
 
   @media (max-width: ${(props) => props.theme.breakpoints.sm}px) {
     font-size: 0.85rem;
+    .main-footer-container {
+      padding: 0 0.5em;
+    }
   }
 
   @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
@@ -33,6 +36,7 @@ const Wrapper = styled.div`
     }
 
     .main-footer-container {
+      padding: 0 2em;
       width: 65%;
     }
   }
@@ -59,14 +63,21 @@ const LoadingScreen = styled.div`
     }
   }
 
-  animation: fade-out 0.1s ease-out 0.5s both;
+  animation: fade-out 0.1s ease-out 0.25s both;
 `;
 
 const Layout = ({ children }) => {
   const darkMode = useDarkMode();
+  const currentTheme = darkMode.value ? darkTheme : lightTheme;
+
+  useEffect(() => {
+    document
+      .querySelector('meta[name="theme-color"]')
+      .setAttribute('content', currentTheme.colors.primary);
+  }, [currentTheme]);
 
   return (
-    <ThemeProvider theme={darkMode.value ? darkTheme : lightTheme}>
+    <ThemeProvider theme={currentTheme}>
       <Wrapper>
         <LoadingScreen />
         <Div100vh className="header-container">
@@ -75,7 +86,6 @@ const Layout = ({ children }) => {
         <div className="main-footer-container">
           <main>{children}</main>
           <Footer />
-          <input type="button" onClick={darkMode.toggle} />
         </div>
       </Wrapper>
     </ThemeProvider>

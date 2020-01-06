@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import SocialWrapper from '../UI/SocialWrapper';
-import NLogoBG from '../../images/NLogoBG.svg';
-import Highlighted from '../UI/Highlighted';
+import SocialWrapper from '../components/SocialWrapper';
+import NLogoBG from '../images/NLogoBG.svg';
+import Highlighted from '../components/Highlighted';
+import NavBar from '../components/Navbar';
+import MobileNavBar from '../components/MobileNavbar';
 
 const Wrapper = styled.header`
   height: 100%;
@@ -24,9 +26,20 @@ const Wrapper = styled.header`
     background-repeat: no-repeat;
   }
 
+  #desktop-navbar {
+    display: none;
+  }
+
   @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
     position: fixed;
     width: inherit;
+
+    #mobile-navbar {
+      display: none;
+    }
+    #desktop-navbar {
+      display: flex;
+    }
   }
 `;
 
@@ -58,19 +71,24 @@ const HeaderContainer = styled.div`
   }
 `;
 
-const Header = () => (
-  <Wrapper>
-    <HeaderContainer>
-      <span>Hello, I&apos;m</span>
-      <h1>
-        <Highlighted>Nazeh</Highlighted>
-      </h1>
-      <h2>
-        A <span className="header__h2--bolder">self-taught</span> web developer
-      </h2>
-      <SocialWrapper />
-    </HeaderContainer>
-  </Wrapper>
-);
+const Header = () => {
+  return (
+    <Wrapper>
+      <HeaderContainer>
+        <span>Hello, I&apos;m</span>
+        <h1>
+          <Highlighted>Nazeh</Highlighted>
+        </h1>
+        <h2>
+          A <span className="header__h2--bolder">self-taught</span> web
+          developer
+        </h2>
+        <SocialWrapper />
+      </HeaderContainer>
+      <NavBar />
+      <MobileNavBar />
+    </Wrapper>
+  );
+};
 
 export default Header;
