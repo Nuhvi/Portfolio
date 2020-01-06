@@ -47,5 +47,11 @@ module.exports = {
     'gatsby-transformer-remark',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-use-dark-mode',
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-155089569-1',
+      },
+    },
   ],
 };
