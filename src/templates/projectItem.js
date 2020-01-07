@@ -44,7 +44,8 @@ const Title = styled.h3`
 `;
 
 const Stack = styled.h4`
-  font-size: 0.7em;
+  font-size: 0.75em;
+  line-height: 1.2em;
   opacity: 0.8;
 `;
 
@@ -88,6 +89,8 @@ const Summary = styled.div`
 const Link = styled.a`
   display: block;
   font-weight: normal;
+  min-width: 80px;
+  margin-left: 0.5em;
 
   &:hover {
     font-weight: 500;

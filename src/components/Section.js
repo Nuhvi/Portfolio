@@ -3,6 +3,11 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Highlighted from './Highlighted';
 
+const Wrapper = styled.section`
+  max-width: ${(props) => props.theme.breakpoints.md}px;
+  margin: 0 auto;
+`;
+
 const Title = styled.h2`
   text-align: center;
   padding: 2em;
@@ -15,18 +20,17 @@ const Subtitle = styled.p`
   font-size: 0.7em;
   line-height: 1.2em;
   opacity: 0.7;
-  width: 60%;
 `;
 
 const Section = ({ children, title, subtitle }) => {
   return (
-    <section id={title}>
+    <Wrapper id={title.replace(/\s/g, '')}>
       <Title>
         <Highlighted>{title}</Highlighted>
         <Subtitle>{subtitle}</Subtitle>
       </Title>
       {children}
-    </section>
+    </Wrapper>
   );
 };
 

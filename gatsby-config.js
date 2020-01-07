@@ -1,5 +1,6 @@
 module.exports = {
   siteMetadata: {
+    siteUrl: 'https://www.nazeh.me/',
     title: 'Nazeh | Web Developer Portfolio',
     description: 'Self Taught Full Stack Developer.',
     author: 'Nazeh',
@@ -46,5 +47,12 @@ module.exports = {
     'gatsby-transformer-remark',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-use-dark-mode',
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-155089569-1',
+        head: false,
+      },
+    },
   ],
 };

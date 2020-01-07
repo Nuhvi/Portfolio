@@ -68,9 +68,10 @@ const LoadingScreen = styled.div`
 
 const Layout = ({ children }) => {
   const darkMode = useDarkMode();
-  const currentTheme = darkMode.value ? darkTheme : lightTheme;
+  let currentTheme = darkMode.value ? darkTheme : lightTheme;
 
   useEffect(() => {
+    currentTheme = darkMode.value ? darkTheme : lightTheme;
     document
       .querySelector('meta[name="theme-color"]')
       .setAttribute('content', currentTheme.colors.primary);
