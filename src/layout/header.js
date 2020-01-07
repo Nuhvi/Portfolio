@@ -53,7 +53,7 @@ const HeaderContainer = styled.div`
     font-size: 1.2em;
     line-height: 2em;
 
-    .header__h2--bolder {
+    span {
       font-weight: 500;
     }
   }
@@ -68,8 +68,7 @@ const Header = () => {
           <Highlighted>Nazeh</Highlighted>
         </h1>
         <h2>
-          A <span className="header__h2--bolder">self-taught</span> web
-          developer
+          A <span>self-taught</span> web developer
         </h2>
         <SocialWrapper />
       </HeaderContainer>

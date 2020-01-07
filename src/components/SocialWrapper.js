@@ -1,3 +1,4 @@
+/* eslint-disable react/forbid-prop-types */
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import {
@@ -6,6 +7,7 @@ import {
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import SocialLink from './SocialLink';
 
@@ -15,11 +17,11 @@ const StyledSocialWrapper = styled.div`
   font-size: 1.2em;
   z-index: 50;
 
-  width: 270px;
+  width: 100%;
   margin: 0 auto;
 `;
 
-const SocialWrapper = () => {
+const SocialWrapper = ({ style }) => {
   const { site } = useStaticQuery(graphql`
     query SiteSocialQuery {
       site {
@@ -37,7 +39,7 @@ const SocialWrapper = () => {
 
   const socialLinks = site.siteMetadata.social;
   return (
-    <StyledSocialWrapper>
+    <StyledSocialWrapper style={style}>
       <SocialLink href={`mailto:${socialLinks.email}`} icon={faEnvelope} />
       <SocialLink href={`//github.com/${socialLinks.github}`} icon={faGithub} />
       <SocialLink
@@ -50,6 +52,10 @@ const SocialWrapper = () => {
       />
     </StyledSocialWrapper>
   );
+};
+
+SocialWrapper.propTypes = {
+  style: PropTypes.object.isRequired,
 };
 
 export default SocialWrapper;
