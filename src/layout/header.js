@@ -4,7 +4,6 @@ import SocialWrapper from '../components/SocialWrapper';
 import NLogoBG from '../images/NLogoBG.svg';
 import Highlighted from '../components/Highlighted';
 import NavBar from '../components/Navbar';
-import MobileNavBar from '../components/MobileNavbar';
 
 const Wrapper = styled.header`
   height: 100%;
@@ -26,20 +25,9 @@ const Wrapper = styled.header`
     background-repeat: no-repeat;
   }
 
-  #desktop-navbar {
-    display: none;
-  }
-
   @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
     position: fixed;
     width: inherit;
-
-    #mobile-navbar {
-      display: none;
-    }
-    #desktop-navbar {
-      display: flex;
-    }
   }
 `;
 
@@ -86,7 +74,6 @@ const Header = () => {
         <SocialWrapper />
       </HeaderContainer>
       <NavBar />
-      <MobileNavBar />
     </Wrapper>
   );
 };

@@ -1,29 +1,17 @@
 /* eslint-disable react/forbid-prop-types */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import styled, { withTheme } from 'styled-components';
-import {
-  faHome,
-  faEnvelope,
-  faUser,
-  faEye,
-  faAdjust,
-} from '@fortawesome/free-solid-svg-icons';
+import styled from 'styled-components';
 import { useTrail, animated } from 'react-spring';
 import NavBtn from './NavBtn';
 import Logo from '../images/NLogo.png';
 
-const Nav = styled.nav`
-  position: fixed;
-  z-index: 9999;
-  right: 0;
-
+const Container = styled.nav`
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  height: 100%;
-  width: 4em;
 `;
 
 const NavBackground = styled(animated.div)`
@@ -80,10 +68,7 @@ const MobileNavToggle = styled.button`
   box-shadow: ${(props) => props.theme.shadows[1]};
 `;
 
-const MobileNavbar = ({ theme }) => {
-  const links = ['', 'projects', 'about', 'contact', 'darkMode'];
-  const icons = [faHome, faEye, faUser, faEnvelope, faAdjust];
-
+const MobileNavbar = ({ theme, links, icons }) => {
   const [toggle, setToggle] = useState(false);
 
   const openStyle = {
@@ -104,7 +89,7 @@ const MobileNavbar = ({ theme }) => {
   });
 
   return (
-    <Nav id="mobile-navbar" onMouseLeave={() => setToggle(false)}>
+    <Container id="mobile-navbar" onMouseLeave={() => setToggle(false)}>
       <MobileNavToggle
         type="button"
         onClick={() => setToggle(!toggle)}
@@ -130,12 +115,14 @@ const MobileNavbar = ({ theme }) => {
           </NavBtnWrapper>
         ))}
       </Wrapper>
-    </Nav>
+    </Container>
   );
 };
 
 MobileNavbar.propTypes = {
   theme: PropTypes.object.isRequired,
+  links: PropTypes.array.isRequired,
+  icons: PropTypes.array.isRequired,
 };
 
-export default withTheme(MobileNavbar);
+export default MobileNavbar;
