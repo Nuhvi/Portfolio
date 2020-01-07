@@ -55,7 +55,11 @@ const SocialWrapper = ({ style }) => {
 };
 
 SocialWrapper.propTypes = {
-  style: PropTypes.object.isRequired,
+  style: PropTypes.object,
+};
+
+SocialWrapper.defaultProps = {
+  style: {},
 };
 
 export default SocialWrapper;
