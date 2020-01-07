@@ -1,8 +1,8 @@
-/* eslint-disable no-alert */
 import React from 'react';
 import styled from 'styled-components';
 import Section from '../components/Section';
 import SocialWrapper from '../components/SocialWrapper';
+import submitHandler from '../utils/contactFormHandler';
 
 const Wrapper = styled.div`
   margin: auto;
@@ -73,32 +73,6 @@ const Button = styled.button`
 `;
 
 const Projects = () => {
-  const submitHandler = (e) => {
-    e.preventDefault();
-    const form = e.target;
-    const url = form.action;
-    let params = '';
-    let value;
-
-    Array.from(form.elements).forEach((elem) => {
-      value = elem.value;
-      params += `${elem.name}=${encodeURIComponent(value)}&`;
-    });
-
-    const xmlhttp = new XMLHttpRequest();
-    xmlhttp.open('POST', url, false);
-    xmlhttp.setRequestHeader(
-      'Content-type',
-      'application/x-www-form-urlencoded'
-    );
-    xmlhttp.send(params);
-
-    if (xmlhttp.responseText.match(/Thank/g)) {
-      form.reset();
-      alert('Thank you! I will respond to your message as soon as possible.');
-    }
-  };
-
   return (
     <Section
       title="contact"
