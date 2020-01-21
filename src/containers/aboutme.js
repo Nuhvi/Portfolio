@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
+import { faSave } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Section from '../components/Section';
 
 const Wrapper = styled.div`
@@ -34,6 +36,19 @@ const Skills = styled.div`
   }
 `;
 
+const ResumeButton = styled.a`
+  height: 3em;
+  width: 10em;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3em;
+  border-radius: 1.5em;
+  background-color: ${(props) => props.theme.colors.red};
+  text-transform: capitalize;
+`;
+
 const Projects = () => {
   const { aboutMe } = useStaticQuery(graphql`
     query {
@@ -43,6 +58,7 @@ const Projects = () => {
             skills
             technologies
             publications
+            resume
           }
           html
         }
@@ -51,7 +67,7 @@ const Projects = () => {
   `);
 
   const { frontmatter, html } = aboutMe.childMarkdownRemark;
-  const { skills, technologies } = frontmatter;
+  const { skills, technologies, resume } = frontmatter;
   const publications = frontmatter.publications.split(',');
 
   return (
@@ -78,6 +94,10 @@ const Projects = () => {
               </a>
             );
           })}
+          <ResumeButton href={resume} target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faSave} style={{ marginRight: '0.5em' }} />
+            Resume
+          </ResumeButton>
         </Skills>
       </Wrapper>
     </Section>
