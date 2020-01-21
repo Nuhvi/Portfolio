@@ -46,7 +46,12 @@ const ResumeButton = styled.a`
   margin-top: 3em;
   border-radius: 1.5em;
   background-color: ${(props) => props.theme.colors.red};
+  color: ${(props) => props.theme.colors.light};
   text-transform: capitalize;
+
+  svg {
+    margin-right: 0.5em;
+  }
 `;
 
 const Projects = () => {
@@ -95,7 +100,7 @@ const Projects = () => {
             );
           })}
           <ResumeButton href={resume} target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faSave} style={{ marginRight: '0.5em' }} />
+            <FontAwesomeIcon icon={faSave} />
             Resume
           </ResumeButton>
         </Skills>
