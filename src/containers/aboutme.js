@@ -42,6 +42,7 @@ const Projects = () => {
           frontmatter {
             skills
             technologies
+            publications
           }
           html
         }
@@ -51,6 +52,7 @@ const Projects = () => {
 
   const { frontmatter, html } = aboutMe.childMarkdownRemark;
   const { skills, technologies } = frontmatter;
+  const publications = frontmatter.publications.split(',');
 
   return (
     <Section title="about me" subtitle="Get to know me.">
@@ -61,6 +63,21 @@ const Projects = () => {
           <p>{skills}</p>
           <h3>Technologies</h3>
           <p>{technologies}</p>
+          <h3>Publications</h3>
+          {publications.map((publication) => {
+            const [title, link] = publication.split(':::');
+            return (
+              <a
+                href={link}
+                key={title}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ fontWeight: 'normal' }}
+              >
+                {title}
+              </a>
+            );
+          })}
         </Skills>
       </Wrapper>
     </Section>

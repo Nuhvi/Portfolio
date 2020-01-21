@@ -2,8 +2,9 @@
 skills: 'Semantic HTML - Responsive Design - CSS Preprocessing - DOM manipulation - UI Engineering - OOP - MVC - RESTful APIs - TDD / BDD - Unit Testing - refactoring - deployment - Relational Databases - Version Control - Git Flow'
 technologies: '
 HTML5 - CSS3 - SCSS - JavaScript - Webpack - React - Redux - Material UI - Ruby - Ruby on Rails - PostgreSQL - NodeJS - Rspec - Jest - REST APIs - GraphQL - Gatsby - Webpack - NPM - Git - Linux - Bash - Figma - Netlify'
+publications: 'Invisible Barriers That Prevent You From Learning Web Development and How to Break Through Them - HackerNoon:::https://hackernoon.com/the-great-filter-of-web-development-and-how-to-break-through-it-9s27q3t0m'
 resume: 'resume.pdf'
---- 
+---
 
 Hello, I am Nazeh, and I am an Architect, a 3d Artist, and a web developer.
 
