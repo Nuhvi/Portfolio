@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Div100vh from 'react-div-100vh';
 import styled, { ThemeProvider } from 'styled-components';
@@ -68,17 +68,9 @@ const LoadingScreen = styled.div`
 
 const Layout = ({ children }) => {
   const darkMode = useDarkMode();
-  let currentTheme = darkMode.value ? darkTheme : lightTheme;
-
-  useEffect(() => {
-    currentTheme = darkMode.value ? darkTheme : lightTheme;
-    document
-      .querySelector('meta[name="theme-color"]')
-      .setAttribute('content', currentTheme.colors.primary);
-  }, [currentTheme]);
 
   return (
-    <ThemeProvider theme={currentTheme}>
+    <ThemeProvider theme={darkMode.value ? darkTheme : lightTheme}>
       <Wrapper>
         <LoadingScreen />
         <Div100vh className="header-container">
