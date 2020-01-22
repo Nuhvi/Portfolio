@@ -122,10 +122,10 @@ const ProjectItem = ({ project }) => {
           <Stack>{stack}</Stack>
         </span>
         <span>
-          <Link href={source} target="_blank">
+          <Link href={source} target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faGithubAlt} /> Source
           </Link>
-          <Link href={live} target="_blank">
+          <Link href={live} target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faLink} /> Demo
           </Link>
         </span>
