@@ -40,7 +40,7 @@ const Footer = () => {
 
   return (
     <StyledFooter>
-      <FooterLogo svgSrc={NLogoFooter} />
+      <FooterLogo svgSrc={NLogoFooter} alt="footer logo" />
       copyright © {new Date().getFullYear()}, {data.site.siteMetadata.author}
     </StyledFooter>
   );

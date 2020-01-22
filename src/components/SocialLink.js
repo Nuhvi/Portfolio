@@ -22,12 +22,17 @@ const StyledSocialLink = styled.a`
   svg {
     font-size: 1em;
   }
+
+  span {
+    font-size: 0;
+  }
 `;
 
 const SocialLink = ({ href, icon }) => {
   return (
     <StyledSocialLink href={href}>
       <FontAwesomeIcon icon={icon} />
+      <span>{href}</span>
     </StyledSocialLink>
   );
 };
