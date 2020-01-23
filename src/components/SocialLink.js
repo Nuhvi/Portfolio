@@ -22,12 +22,17 @@ const StyledSocialLink = styled.a`
   svg {
     font-size: 1em;
   }
+
+  span {
+    font-size: 0;
+  }
 `;
 
-const SocialLink = ({ href, icon }) => {
+const SocialLink = ({ href, icon, name }) => {
   return (
-    <StyledSocialLink href={href}>
+    <StyledSocialLink href={href} target="_blank" rel="noopener noreferrer">
       <FontAwesomeIcon icon={icon} />
+      <span>{name}</span>
     </StyledSocialLink>
   );
 };
@@ -35,6 +40,7 @@ const SocialLink = ({ href, icon }) => {
 SocialLink.propTypes = {
   icon: PropTypes.shape({}).isRequired,
   href: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
 };
 
 export default SocialLink;

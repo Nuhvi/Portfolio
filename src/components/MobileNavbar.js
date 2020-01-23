@@ -94,6 +94,7 @@ const MobileNavbar = ({ theme, links, icons }) => {
         type="button"
         onClick={() => setToggle(!toggle)}
         icon={Logo}
+        aria-label="Menu Toggle"
       />
       <NavBackground style={{ opacity: openStyle.opacity }} />
       <Wrapper style={{ paddingTop: openStyle.paddingTop }}>

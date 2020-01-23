@@ -25,7 +25,7 @@ const Projects = () => {
                 stack
                 image {
                   childImageSharp {
-                    fluid(maxWidth: 1600, quality: 90) {
+                    fluid(maxWidth: 928, quality: 90) {
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }

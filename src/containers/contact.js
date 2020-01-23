@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import styled from 'styled-components';
 import Section from '../components/Section';
@@ -17,7 +18,7 @@ const Form = styled.form`
   font-family: inherit;
 `;
 
-const Inputs = styled.div`
+const NameEmail = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1em;
@@ -36,6 +37,10 @@ const Input = styled.input`
 
   border: none;
   border-bottom: 3px solid ${(props) => props.theme.colors.secondary}11;
+`;
+
+const Label = styled.label`
+  font-size: 0;
 `;
 
 const TextArea = styled.textarea`
@@ -85,24 +90,39 @@ const Projects = () => {
           action="https://getform.io/f/abda866d-2a7e-4328-b791-4b03b95aec5d"
           onSubmit={submitHandler}
         >
-          <Inputs>
-            <Input
-              id="name"
-              type="text"
-              name="name"
-              placeholder="Name"
+          <NameEmail>
+            <Label>
+              name
+              <Input
+                id="name"
+                type="text"
+                name="name"
+                placeholder="Name"
+                required
+              />
+            </Label>
+
+            <Label>
+              email
+              <Input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+              />
+            </Label>
+          </NameEmail>
+          <Label>
+            message
+            <TextArea
+              id="message"
+              name="message"
+              placeholder="message"
+              rows="15"
               required
             />
-            <Input
-              id="email"
-              type="email"
-              name="email"
-              placeholder="Email"
-              aria-describedby="emailHelp"
-              required
-            />
-          </Inputs>
-          <TextArea name="message" rows="15" required />
+          </Label>
           <Button type="submit">SEND</Button>
         </Form>
       </Wrapper>

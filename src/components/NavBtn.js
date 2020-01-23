@@ -50,6 +50,7 @@ const NavBtn = ({ name, icon, style }) => {
       ) : (
         <a href={`/#${name.replace(/\s/g, '')}`} title={name}>
           <FontAwesomeIcon icon={icon} style={{ width: '80%' }} />
+          <span style={{ fontSize: '0' }}>name</span>
         </a>
       )}
     </Root>

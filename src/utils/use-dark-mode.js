@@ -1,13 +1,15 @@
 import storage from 'local-storage-fallback';
-import useOriginalDarkMode from 'use-dark-mode';
+import _useDarkMode_ from 'use-dark-mode';
 
 const useDarkMode = () => {
-  const darkMode = useOriginalDarkMode();
+  const darkMode = _useDarkMode_();
 
   if (!storage.darkModeToggled) {
     const localTime = new Date().getHours();
-    const isDay = localTime < 16 && localTime > 8;
-    if (isDay && darkMode.value) darkMode.toggle();
+    const isDay = localTime > 8 && localTime < 16;
+
+    if (isDay && darkMode.value) darkMode.disable();
+    if (!isDay && !darkMode.value) darkMode.enable();
   }
 
   const toggle = () => {
