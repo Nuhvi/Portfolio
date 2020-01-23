@@ -23,6 +23,10 @@
 
 A web development portfolio built with gatsbyjs.
 
+### lighthouse Audit
+
+<img alt="lighthouse" src="docs/lighthouse.png" />
+
 ## Install
 
 ```sh

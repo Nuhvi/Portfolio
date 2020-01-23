@@ -40,15 +40,25 @@ const SocialWrapper = ({ style }) => {
   const socialLinks = site.siteMetadata.social;
   return (
     <StyledSocialWrapper style={style}>
-      <SocialLink href={`mailto:${socialLinks.email}`} icon={faEnvelope} />
-      <SocialLink href={`//github.com/${socialLinks.github}`} icon={faGithub} />
+      <SocialLink
+        href={`mailto:${socialLinks.email}`}
+        icon={faEnvelope}
+        name="email"
+      />
+      <SocialLink
+        href={`//github.com/${socialLinks.github}`}
+        icon={faGithub}
+        name="github"
+      />
       <SocialLink
         href={`//linkedin.com/in/${socialLinks.linkedin}`}
         icon={faLinkedinIn}
+        name="linkedin"
       />
       <SocialLink
         href={`//twitter.com/${socialLinks.twitter}`}
         icon={faTwitter}
+        name="twitter"
       />
     </StyledSocialWrapper>
   );

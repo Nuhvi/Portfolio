@@ -28,11 +28,11 @@ const StyledSocialLink = styled.a`
   }
 `;
 
-const SocialLink = ({ href, icon }) => {
+const SocialLink = ({ href, icon, name }) => {
   return (
-    <StyledSocialLink href={href}>
+    <StyledSocialLink href={href} target="_blank" rel="noopener noreferrer">
       <FontAwesomeIcon icon={icon} />
-      <span>{href}</span>
+      <span>{name}</span>
     </StyledSocialLink>
   );
 };
@@ -40,6 +40,7 @@ const SocialLink = ({ href, icon }) => {
 SocialLink.propTypes = {
   icon: PropTypes.shape({}).isRequired,
   href: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
 };
 
 export default SocialLink;
