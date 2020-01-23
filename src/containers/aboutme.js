@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Section from '../components/Section';
 
 const Wrapper = styled.div`
+  max-width: 700px;
   margin: auto;
   padding-bottom: 3em;
 
@@ -15,42 +16,51 @@ const Wrapper = styled.div`
 
 const About = styled.div`
   p {
-    margin: 1em 0;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
   }
 
-  span {
-    font-weight: bold;
+  strong {
+    font-weight: 600;
+    color: ${(props) => props.theme.colors.red};
   }
 `;
 
-const Skills = styled.div`
+const Others = styled.div`
   text-transform: uppercase;
 
   h3 {
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: bold;
     margin: 2em 0 1em 0;
   }
 
   p {
+    font-size: 0.9em;
   }
 `;
 
 const ResumeButton = styled.a`
-  height: 3em;
-  width: 10em;
+  height: 2em;
+  width: 9em;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 3em;
   border-radius: 1.5em;
-  background-color: ${(props) => props.theme.colors.red};
-  color: ${(props) => props.theme.colors.light};
+  border: 2px solid ${(props) => props.theme.colors.red};
+  background-color: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.secondary};
   text-transform: capitalize;
 
   svg {
     margin-right: 0.5em;
+  }
+
+  &:hover {
+    color: ${(props) => props.theme.colors.primary};
+    background-color: ${(props) => props.theme.colors.red};
   }
 `;
 
@@ -79,7 +89,7 @@ const Projects = () => {
     <Section title="about me" subtitle="Get to know me.">
       <Wrapper>
         <About dangerouslySetInnerHTML={{ __html: html }} />
-        <Skills>
+        <Others>
           <h3>Skills</h3>
           <p>{skills}</p>
           <h3>Technologies</h3>
@@ -99,11 +109,11 @@ const Projects = () => {
               </a>
             );
           })}
-          <ResumeButton href={resume} target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faSave} />
-            Resume
-          </ResumeButton>
-        </Skills>
+        </Others>
+        <ResumeButton href={resume} target="_blank" rel="noopener noreferrer">
+          <FontAwesomeIcon icon={faSave} />
+          Resume
+        </ResumeButton>
       </Wrapper>
     </Section>
   );

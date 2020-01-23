@@ -6,10 +6,10 @@ publications: 'Invisible Barriers That Prevent You From Learning Web Development
 resume: 'resume.pdf'
 ---
 
-Hello, I am Nazeh, and I am an Architect, a 3d Artist, and a web developer.
+Hello, I am **Nazeh**, and I am an Architect, a 3d Artist, and a web developer.
 
 I have always been fascinated by Software’s potentials as a visual designer. So I learned full-stack development by building multiple web-apps.
 
-I can speak the language of both designers and developers.
+I can **speak** the language of both **designers** and **developers**.
 
-Currently, I am looking for a position as a front-end developer joining an experienced team and contribute to building great products.
+Currently, I am looking for a position as a front-end / full-stack developer, joining an experienced team and contribute to building great products.
