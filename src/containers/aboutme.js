@@ -5,7 +5,7 @@ import Section from '../components/Section';
 import ResumeButton from '../components/ResumeButton';
 
 const Wrapper = styled.div`
-  max-width: 700px;
+  max-width: 45em;
   margin: auto;
   padding-bottom: 3em;
 
