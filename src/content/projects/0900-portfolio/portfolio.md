@@ -1,8 +1,8 @@
 ---
-title: "This.portfolio"
+title: 'This.portfolio'
 live: 'https://www.nazeh.me/'
 source: 'https://github.com/Nazeh/Portfolio'
-stack: 'Gatsby - React - styled-components - graphql - react-spring - useDarkMode - google analytics'
+stack: 'Gatsby - React - styled-components - graphql'
 image: 'portfolio.png'
 ---
 

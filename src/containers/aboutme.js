@@ -1,16 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
-import { faSave } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Section from '../components/Section';
+import ResumeButton from '../components/ResumeButton';
 
 const Wrapper = styled.div`
-  max-width: 700px;
+  max-width: 45em;
   margin: auto;
   padding-bottom: 3em;
 
-  text-align: center;
+  text-align: justify;
   line-height: 1.5em;
 `;
 
@@ -27,7 +26,7 @@ const About = styled.div`
 `;
 
 const Others = styled.div`
-  text-transform: uppercase;
+  margin-bottom: 2em;
 
   h3 {
     font-size: 1em;
@@ -40,30 +39,6 @@ const Others = styled.div`
   }
 `;
 
-const ResumeButton = styled.a`
-  height: 2em;
-  width: 9em;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 3em;
-  border-radius: 1.5em;
-  border: 2px solid ${(props) => props.theme.colors.red};
-  background-color: ${(props) => props.theme.colors.primary};
-  color: ${(props) => props.theme.colors.secondary};
-  text-transform: capitalize;
-
-  svg {
-    margin-right: 0.5em;
-  }
-
-  &:hover {
-    color: ${(props) => props.theme.colors.primary};
-    background-color: ${(props) => props.theme.colors.red};
-  }
-`;
-
 const Projects = () => {
   const { aboutMe } = useStaticQuery(graphql`
     query {
@@ -73,7 +48,6 @@ const Projects = () => {
             skills
             technologies
             publications
-            resume
           }
           html
         }
@@ -82,7 +56,7 @@ const Projects = () => {
   `);
 
   const { frontmatter, html } = aboutMe.childMarkdownRemark;
-  const { skills, technologies, resume } = frontmatter;
+  const { skills, technologies } = frontmatter;
   const publications = frontmatter.publications.split(',');
 
   return (
@@ -110,10 +84,7 @@ const Projects = () => {
             );
           })}
         </Others>
-        <ResumeButton href={resume} target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon icon={faSave} />
-          Resume
-        </ResumeButton>
+        <ResumeButton />
       </Wrapper>
     </Section>
   );

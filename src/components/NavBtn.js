@@ -21,6 +21,7 @@ const Root = styled(animated.div)`
 
   a,
   button {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;

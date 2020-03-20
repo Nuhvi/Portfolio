@@ -79,7 +79,6 @@ const Summary = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
 
   padding: 2em;
   line-height: 1.5em;

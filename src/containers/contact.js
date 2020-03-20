@@ -8,7 +8,7 @@ import submitHandler from '../utils/contactFormHandler';
 const Wrapper = styled.div`
   margin: auto;
   padding-bottom: 3em;
-  max-width: 600px;
+  max-width: 40em;
 `;
 
 const Form = styled.form`
@@ -84,7 +84,7 @@ const Projects = () => {
       subtitle="If you are interested in a collaboration, don't hesitate to send me an email."
     >
       <Wrapper>
-        <SocialWrapper style={{ maxWidth: '270px', margin: 'auto' }} />
+        <SocialWrapper style={{ maxWidth: '15em', margin: 'auto' }} />
         <Form
           method="POST"
           action="https://getform.io/f/abda866d-2a7e-4328-b791-4b03b95aec5d"
