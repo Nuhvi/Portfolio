@@ -4,6 +4,7 @@ import SocialWrapper from '../components/SocialWrapper';
 import NLogoBG from '../images/NLogoBG.svg';
 import Highlighted from '../components/Highlighted';
 import NavBar from '../components/Navbar';
+import ResumeButton from '../components/ResumeButton';
 
 const Wrapper = styled.header`
   height: 100%;
@@ -11,6 +12,7 @@ const Wrapper = styled.header`
   box-shadow: ${(props) => props.theme.shadows[1]};
 
   display: flex;
+  justify-content: center;
   flex-direction: column;
 
   &::before {
@@ -33,7 +35,7 @@ const Wrapper = styled.header`
 
 const HeaderContainer = styled.div`
   height: 15em;
-  margin: auto;
+  margin: 2em auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -67,11 +69,10 @@ const Header = () => {
         <h1>
           <Highlighted>Nazeh</Highlighted>
         </h1>
-        <h2>
-          A <span>self-taught</span> web developer
-        </h2>
+        <h2>A full-stack web developer</h2>
         <SocialWrapper />
       </HeaderContainer>
+      <ResumeButton />
       <NavBar />
     </Wrapper>
   );
