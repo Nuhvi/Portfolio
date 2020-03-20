@@ -42,7 +42,7 @@ const Wrapper = styled.div`
   }
 
   @media (min-width: ${(props) => props.theme.breakpoints.xl}px) {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 `;
 
