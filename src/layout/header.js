@@ -69,7 +69,7 @@ const Header = () => {
         <h1>
           <Highlighted>Nazeh</Highlighted>
         </h1>
-        <h2>A full-stack web developer</h2>
+        <h2>A front-end web developer</h2>
         <SocialWrapper />
       </HeaderContainer>
       <ResumeButton />

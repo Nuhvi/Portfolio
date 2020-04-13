@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://www.nazeh.me/',
-    title: 'Nazeh | Web Developer Portfolio',
-    description: 'Self Taught Full Stack Developer.',
+    title: 'Ar Nazeh - Frontend Web Developer',
+    description:
+      'Ar Nazeh is a professional frontend developer based in Istanbul, Turkey.',
     author: 'Nazeh',
     social: {
       email: 'hello@nazeh.me',
