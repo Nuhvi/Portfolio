@@ -15,7 +15,7 @@
   </a>
 </p>
 
-> Nazeh Full-stack developer portfolio
+> Nazeh Frontend Developer
 
 ### ✨ [Demo](https://www.nazeh.me/)
 
@@ -44,14 +44,14 @@ gatsby develop
 
 👤 **Nazeh**
 
-* Website: [Nazeh.me](https://www.nazeh.me/)
-* Twitter: [@arnazeh](https://twitter.com/arnazeh)
-* Github: [@nazeh](https://github.com/nazeh)
-* LinkedIn: [@arnazeh](https://linkedin.com/in/arnazeh)
+- Website: [Nazeh.me](https://www.nazeh.me/)
+- Twitter: [@arnazeh](https://twitter.com/arnazeh)
+- Github: [@nazeh](https://github.com/nazeh)
+- LinkedIn: [@arnazeh](https://linkedin.com/in/arnazeh)
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/Nazeh/Portfolio/issues). 
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/Nazeh/Portfolio/issues).
 
 ## Show your support
 
