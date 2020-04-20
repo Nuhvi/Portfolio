@@ -3,7 +3,7 @@ module.exports = {
     siteUrl: 'https://www.nazeh.me/',
     title: 'Ar Nazeh - Frontend Web Developer',
     description:
-      'Ar Nazeh is a professional frontend developer based in Istanbul, Turkey.',
+      'Ar Nazeh is a Frontend Developer, Designer and Creative Coder.',
     author: 'Nazeh',
     social: {
       email: 'hello@nazeh.me',
