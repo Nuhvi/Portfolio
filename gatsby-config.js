@@ -10,20 +10,20 @@ module.exports = {
     social: {
       twitter: 'arnazeh',
     },
-    avatar: '${__dirname}/content/assets/profile-pic.jpg',
+    avatar: `${__dirname}/content/assets/profile-pic.jpg`,
   },
   plugins: [
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: '${__dirname}/content/blog',
+        path: `${__dirname}/content/blog`,
         name: 'blog',
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: '${__dirname}/content/assets',
+        path: `${__dirname}/content/assets`,
         name: 'assets',
       },
     },
@@ -70,7 +70,7 @@ module.exports = {
         background_color: '#1a1a1a',
         display: 'standalone',
         orientation: 'natural',
-        icon: 'content/assets/icon.png',
+        icon: 'content/assets/an-logo.png',
         share_target: {
           action: '/share/',
           method: 'GET',
