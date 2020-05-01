@@ -1,6 +1,6 @@
 ---
 title: Watch your head!
-date: "2020-04-26T22:12:03.284Z"
+date: '2020-04-26T22:12:03.284Z'
 description: Quick foolproof Metadata setup!
 tags: html svelte metadata
 ---
@@ -168,14 +168,14 @@ Then use it in your pages:
 ```html
 //App.svelte
 <script>
-  import Meta from "./Meta.svelte"
+  import Meta from './Meta.svelte'
 
   const metadata = {
-    title: "Svelte is Awesome",
-    description: "It really is!",
-    image: "https://svelte.dev/images/twitter-card.png",
-    imageAlt: "Svelte svelte.dev",
-    url: "svelte.dev",
+    title: 'Svelte is Awesome',
+    description: 'It really is!',
+    image: 'https://svelte.dev/images/twitter-card.png',
+    imageAlt: 'Svelte svelte.dev',
+    url: 'svelte.dev',
   }
 </script>
 

@@ -1,0 +1,25 @@
+html,
+body,
+#___gatsby,
+#gatsby-focus-wrapper,
+#layout-container {
+  height: 100%;
+}
+
+body {
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+#layout-container {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 auto;
+}
+
+a {
+  color: var(--color-primary);
+}
