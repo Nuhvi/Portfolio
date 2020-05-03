@@ -21,6 +21,28 @@
   --color-secondary: #43a9a3;
 }
 
+@mixin nadia-theme {
+  --color-bg: #153956;
+  --color-bg-offset: #252526;
+  --color-text: #fffffe;
+  --color-text-offset: #b8c1ec;
+  --color-border: #2d2d2d;
+  --color-primary: #f07b61;
+  --color-primary-offset: #ff2957;
+  --color-secondary: #43a9a3;
+}
+
+@mixin nazeh-theme {
+  --color-bg: #1d1d1d;
+  --color-bg-offset: #212121;
+  --color-text: #fafafa;
+  --color-text-offset: #b8c1ec;
+  --color-border: #2d2d2d;
+  --color-primary: #ee432c;
+  --color-primary-offset: #ff2957;
+  --color-secondary: #43a9a3;
+}
+
 html[data-theme='dark'] {
   :root {
     @include dark-theme();
@@ -29,6 +51,6 @@ html[data-theme='dark'] {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    @include dark-theme();
+    @include nazeh-theme();
   }
 }

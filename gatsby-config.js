@@ -6,11 +6,11 @@ module.exports = {
       summary: 'a Frontend developer.',
     },
     description: 'Ar Nazeh is a Frontend developer.',
-    siteUrl: 'https://gatsby-starter-blog-demo.netlify.com/',
+    siteUrl: 'https://www.nazeh.me',
     social: {
       twitter: 'arnazeh',
     },
-    avatar: `${__dirname}/content/assets/profile-pic.jpg`,
+    defaultThumbnail: '/static/default-thumbnail.jpg',
   },
   plugins: [
     {

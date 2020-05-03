@@ -11,7 +11,20 @@ Wordpress2016.overrideThemeStyles = () => {
 
 delete Wordpress2016.googleFonts
 
-const typography = new Typography(Wordpress2016)
+const typography = new Typography({
+  ...Wordpress2016,
+  baseFontSize: '18px',
+  baseLineHeight: 1.666,
+  headerFontFamily: ['amiri', 'serif'],
+  bodyFontFamily: [
+    'Avenir Next',
+    'Helvetica Neue',
+    'Segoe UI',
+    'Helvetica',
+    'Arial',
+    'sans-serif',
+  ],
+})
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {
