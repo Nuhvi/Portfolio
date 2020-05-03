@@ -3,6 +3,11 @@ li {
   margin: 0;
 }
 
+ul,
+ol {
+  list-style-type: none;
+}
+
 a {
   box-shadow: none;
 }

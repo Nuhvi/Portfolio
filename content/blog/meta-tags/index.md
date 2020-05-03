@@ -2,7 +2,7 @@
 title: Watch your head!
 date: '2020-04-26T22:12:03.284Z'
 description: Quick foolproof Metadata setup!
-tags: html svelte metadata
+tags: html, svelte, metadata
 ---
 
 Remember when people went to events and conferences? remember Badges? well, your webpage can wear lots of badges too and it can get overwhelming so here is the long story short!

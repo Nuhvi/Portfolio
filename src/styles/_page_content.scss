@@ -1,0 +1,32 @@
+@import './_constants';
+
+.page_content {
+  width: 100%;
+  max-width: 60ch;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 2rem;
+
+  font-size: 1.125rem;
+
+  ol {
+    li {
+      margin-bottom: 3rem;
+      header {
+        h2 {
+          margin: 0;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+
+  @media (min-width: $md) {
+    font-size: 1.375rem;
+    padding-bottom: 4rem;
+
+    li {
+      margin-bottom: 5rem;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import './_constants';
+
+.page_header {
+  padding: 2em 0;
+
+  h1 {
+    text-transform: capitalize;
+    font-size: 2.5rem;
+    margin: 0;
+  }
+
+  p {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  @media (min-width: $md) {
+    padding: 4em 0;
+    text-align: center;
+    h1 {
+      font-size: 5rem;
+    }
+    p {
+      font-size: 2rem;
+    }
+  }
+}

@@ -1,3 +1,5 @@
+@import './constants';
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -32,7 +34,6 @@
     height: 100%;
 
     .nav_menu {
-      list-style: none;
       height: 100%;
       display: flex;
 
@@ -45,7 +46,7 @@
           display: flex;
           align-items: center;
           height: 100%;
-          padding: 0 1.25em;
+          padding: 0 1.25rem;
         }
 
         ::after {
@@ -54,7 +55,7 @@
           height: 5px;
           position: absolute;
           bottom: 0;
-          left: 1em;
+          left: 1rem;
           right: 100%;
           background-color: var(--color-bg-offset);
 
@@ -64,15 +65,15 @@
 
         &:hover {
           ::after {
-            left: 1em;
-            right: 1em;
+            left: 1rem;
+            right: 1rem;
           }
         }
 
         &.active {
           ::after {
-            left: 1em;
-            right: 1em;
+            left: 1rem;
+            right: 1rem;
             background-color: var(--color-primary);
           }
         }
@@ -80,7 +81,7 @@
     }
   }
 
-  @media (min-width: 670px) {
+  @media (min-width: $md) {
     padding: 3.125em 0;
   }
 }

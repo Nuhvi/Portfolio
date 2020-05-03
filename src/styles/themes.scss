@@ -1,11 +1,11 @@
 // colors
 :root {
   --color-bg: #ffffff;
-  --color-bg-offset: #f7f7f9;
+  --color-bg-offset: #eeeeee;
   --color-text: #373a3c;
   --color-text-offset: #818a91;
   --color-border: #eceeef;
-  --color-primary: #ff335f;
+  --color-primary: #da133e;
   --color-primary-offset: #ff1447;
   --color-secondary: #43a9a3;
 }
@@ -38,19 +38,17 @@
   --color-text: #fafafa;
   --color-text-offset: #b8c1ec;
   --color-border: #2d2d2d;
-  --color-primary: #ee432c;
+  --color-primary: #ff7361;
   --color-primary-offset: #cc3723;
-  --color-secondary: #872cee;
+  --color-secondary: #20fa95;
 }
 
 html[data-theme='dark'] {
-  :root {
-    @include dark-theme();
-  }
+  @include dark-theme();
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    @include dark-theme();
-  }
-}
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     @include dark-theme();
+//   }
+// }

@@ -3,13 +3,12 @@ import Image from 'gatsby-image'
 
 const NavCollection = [
   { path: '/', name: 'home' },
-  { path: 'blog', name: 'writing' },
-  { path: 'about' },
+  { path: '/blog', name: 'writing' },
+  { path: '/about', name: 'about' },
 ]
 
 function Header({ location, avatar, author }) {
-  let currPath = location.pathname.match(/\/(.+?)(?=\/|$)/)
-  currPath = (currPath && currPath[1]) || '/'
+  const currPath = location.pathname.match(/(\/.*?)(?=\/|$)/)[0]
 
   return (
     <header className="header" role="banner">
@@ -21,7 +20,7 @@ function Header({ location, avatar, author }) {
         <ul className="nav_menu">
           {NavCollection.map((navItem, key) => (
             <li key={key} className={currPath === navItem.path ? 'active' : ''}>
-              <a href={'/' + navItem.path}>{navItem.name || navItem.path}</a>
+              <a href={navItem.path}>{navItem.name || navItem.path}</a>
             </li>
           ))}
         </ul>

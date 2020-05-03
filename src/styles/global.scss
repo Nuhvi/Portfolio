@@ -1,7 +1,6 @@
-@import './_constants.scss';
 @import './_normalize.scss';
-@import './_header.scss';
 @import './_layout.scss';
+@import './_header.scss';
 
 html,
 body,
@@ -21,6 +20,7 @@ main {
 
 a {
   color: var(--color-primary);
+  font-weight: bold;
 }
 
 button {
