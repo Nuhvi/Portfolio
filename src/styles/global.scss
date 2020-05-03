@@ -1,10 +1,12 @@
-$lg: 1280px;
+@import './_constants.scss';
+@import './_normalize.scss';
+@import './_header.scss';
+@import './_layout.scss';
 
 html,
 body,
 #___gatsby,
-#gatsby-focus-wrapper,
-#layout-container {
+#gatsby-focus-wrapper {
   height: 100%;
 }
 
@@ -13,17 +15,19 @@ body {
   background-color: var(--color-bg);
 }
 
-#layout-container {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  max-width: $lg;
-}
-
 main {
   flex: 1 auto;
 }
 
 a {
   color: var(--color-primary);
+}
+
+button {
+  user-select: none;
+}
+
+::selection {
+  background: var(--color-secondary);
+  color: #fff;
 }

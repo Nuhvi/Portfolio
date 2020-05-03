@@ -6,6 +6,9 @@ Wordpress2016.overrideThemeStyles = () => {
     'a.gatsby-resp-image-link': {
       boxShadow: `none`,
     },
+    h1: {
+      fontFamily: ['amiri', 'serif'].join(','),
+    },
   }
 }
 
@@ -13,7 +16,7 @@ delete Wordpress2016.googleFonts
 
 const typography = new Typography({
   ...Wordpress2016,
-  baseFontSize: '18px',
+  baseFontSize: '16px',
   baseLineHeight: 1.666,
   headerFontFamily: ['amiri', 'serif'],
   bodyFontFamily: [

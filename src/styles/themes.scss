@@ -10,7 +10,7 @@
   --color-secondary: #43a9a3;
 }
 
-@mixin dark-theme {
+@mixin max_dark-theme {
   --color-bg: #1d1f21;
   --color-bg-offset: #252526;
   --color-text: #ffffff;
@@ -32,15 +32,15 @@
   --color-secondary: #43a9a3;
 }
 
-@mixin nazeh-theme {
+@mixin dark-theme {
   --color-bg: #1d1d1d;
-  --color-bg-offset: #212121;
+  --color-bg-offset: #292929;
   --color-text: #fafafa;
   --color-text-offset: #b8c1ec;
   --color-border: #2d2d2d;
   --color-primary: #ee432c;
-  --color-primary-offset: #ff2957;
-  --color-secondary: #43a9a3;
+  --color-primary-offset: #cc3723;
+  --color-secondary: #872cee;
 }
 
 html[data-theme='dark'] {
@@ -51,6 +51,6 @@ html[data-theme='dark'] {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    @include nazeh-theme();
+    @include dark-theme();
   }
 }

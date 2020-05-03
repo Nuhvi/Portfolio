@@ -1,0 +1,8 @@
+#layout-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 90vw;
+  max-width: var(--lg);
+}

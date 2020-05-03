@@ -1,21 +1,30 @@
 import React from 'react'
+import Image from 'gatsby-image'
 
-const NavCollection = [{ path: 'blog', name: 'writing' }, { path: 'about' }]
+const NavCollection = [
+  { path: '/', name: 'home' },
+  { path: 'blog', name: 'writing' },
+  { path: 'about' },
+]
 
-function Header({ location }) {
-  const pageUrl = location.pathname.match(/\/(.+?)(?=\/|$)/)[1]
+function Header({ location, avatar, author }) {
+  let currPath = location.pathname.match(/\/(.+?)(?=\/|$)/)
+  currPath = (currPath && currPath[1]) || '/'
+
   return (
-    <header>
+    <header className="header" role="banner">
+      <a href="/" aria-label="Go to homepage" className="brand">
+        <Image fixed={avatar.childImageSharp.fixed} alt={author.name} />
+        <span>{author.name}</span>
+      </a>
       <nav>
-        {NavCollection.map((navItem, i) => (
-          <a
-            href={'/' + navItem.path}
-            className={pageUrl === navItem.path ? 'highlight' : ''}
-            key={i}
-          >
-            {navItem.name || navItem.path}
-          </a>
-        ))}
+        <ul className="nav_menu">
+          {NavCollection.map((navItem, key) => (
+            <li key={key} className={currPath === navItem.path ? 'active' : ''}>
+              <a href={'/' + navItem.path}>{navItem.name || navItem.path}</a>
+            </li>
+          ))}
+        </ul>
       </nav>
     </header>
   )
