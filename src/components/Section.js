@@ -5,11 +5,7 @@ import Highlighted from './Highlighted';
 
 const Wrapper = styled.section`
   margin: 0 auto;
-  max-width: ${(props) => props.theme.breakpoints.md}px;
-
-  @media (min-width: ${(props) => props.theme.breakpoints.xl}px) {
-    max-width: ${(props) => props.theme.breakpoints.xl}px;
-  }
+  max-width: 50ch;
 `;
 
 const Title = styled.h2`
