@@ -1,6 +1,6 @@
 ---
 title: 'Single Stroke'
-live: 'https://single-stroke.nazeh.me/'
+live: 'https://single-stroke.nzh.io/'
 source: 'https://github.com/Nazeh/single-stroke'
 stack: 'TypeScript - P5.js'
 image: 'single-stroke.png'
